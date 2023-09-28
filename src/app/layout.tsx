@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     }
                 }
             >
-                <div className="hidden lg:block">
+                <div className="hidden sm:block">
                     <Image
                         src={bg}
                         alt="Background"
@@ -53,20 +53,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         }}
                     />
                 </div>
-                <div className="lg:hidden">
+                <div className="sm:hidden">
                     <Image
                         src={bgMobile}
                         alt="Background"
-                        fill
+                        quality={90}
                         style={{
                             position: 'absolute',
                             top: 0,
-                            // left: 0,
                             zIndex: -1,
-                            // width: '100%',
                             height: '100%',
                             objectFit: 'cover',
-                            objectPosition: '100% 0%',
+                            objectPosition: '50% 50%',
+                            // objectPosition: '100% 0%',
                         }}
                     />
                 </div>
