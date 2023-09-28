@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat, Nunito_Sans } from 'next/font/google'
 import bg from '../../public/bg.jpeg'
-import bgMobile from '../../public/bg-mobile.jpeg'
 import Image from 'next/image'
 
 const inter = Montserrat({
@@ -54,20 +53,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     />
                 </div>
                 <div className="sm:hidden">
-                    <Image
-                        src={bgMobile}
-                        alt="Background"
-                        quality={90}
+                    <div
+                        className="absolute top-0 h-full w-full z-[-1]"
                         style={{
-                            position: 'absolute',
-                            top: 0,
-                            zIndex: -1,
-                            height: '100%',
-                            objectFit: 'cover',
-                            objectPosition: '50% 50%',
-                            // objectPosition: '100% 0%',
+                            backgroundImage: `repeating-linear-gradient(
+                            to bottom,
+                            rgb(13,22,53),
+                            rgb(20,108,232),
+                            rgb(18,38,111),
+                            rgb(24,41,133),
+                            rgb(13,22,53) 4000px
+                          )`,
                         }}
-                    />
+                    ></div>
                 </div>
                 {children}
             </body>
