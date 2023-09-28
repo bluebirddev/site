@@ -36,28 +36,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     }
                 }
             >
-                <div className="hidden sm:block">
-                    <Image
-                        src={bg}
-                        alt="Background"
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            // left: 0,
-                            zIndex: -1,
-                            // width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            objectPosition: '100% 0%',
-                        }}
-                    />
-                </div>
+                {/* <div className="flex sm:block w-full absolute inset-0"> */}
+                <Image
+                    src={bg}
+                    className="hidden sm:block"
+                    alt="Background"
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        // left: 0,
+                        zIndex: -1,
+                        // width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: '100% 0%',
+                    }}
+                />
+                {/* </div> */}
                 <div className="sm:hidden">
                     <div
                         className="absolute top-0 h-full w-full z-[-1]"
                         style={{
                             backgroundImage: `repeating-linear-gradient(
                             to bottom,
+                            rgb(13,22,53),
                             rgb(13,22,53),
                             rgb(20,108,232),
                             rgb(18,38,111),
