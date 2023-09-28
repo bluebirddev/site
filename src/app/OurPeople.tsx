@@ -38,7 +38,10 @@ const blocks = [
 
 export function OurPeople() {
     return (
-        <div className="container w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-48">
+        <div
+            className="container w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-48"
+            id="people"
+        >
             <div className="space-y-8 flex flex-col items-center pb-12 lg:pb-24">
                 <h3 className="pill-heading">Our People</h3>
                 <h2 className="heading-2">The minds behind Bluebird</h2>

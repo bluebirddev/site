@@ -11,7 +11,7 @@ import revioLogo from '../../public/case-studies/revio-logo.svg'
 
 export function CaseStudies() {
     return (
-        <div className="pt-24 lg:pt-40 container">
+        <div className="pt-24 lg:pt-40 container" id="projects">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
                 <div className="flex flex-col items-start space-y-8">
                     <h3 className="pill-heading">Project Showcase</h3>

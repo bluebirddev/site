@@ -6,6 +6,9 @@ body {
     font-size: 16px;
     @apply text-white;
 }
+html {
+    @apply scroll-smooth;
+}
 
 .container {
     @apply w-full max-w-[90%] 2xl:max-w-screen-xl;
@@ -39,53 +42,53 @@ p {
     @apply text-base text-[rgba(255,255,255,0.7)] tracking-[0.5px] font-light;
 }
 
-button.primary {
-    @apply bg-[#f3883c];
+.primary {
+    @apply border border-white border-opacity-20 bg-[#f3883c];
 }
-button.primary:active {
+.primary:active {
     @apply bg-opacity-80;
 }
 
-button.secondary {
+.secondary {
     @apply border border-white border-opacity-20 bg-white bg-opacity-5;
 }
-button.secondary:hover {
+.secondary:hover {
     @apply bg-opacity-10;
 }
-button.secondary:focus-visible {
+.secondary:focus-visible {
     @apply border-transparent;
 }
-button.secondary:active {
+.secondary:active {
     @apply bg-opacity-20;
     /* rgba(34,52,83,0.3)] */
 }
 
-button.tertiary {
+.tertiary {
     /* @apply bg-[rgba(14,22,53,0.3)]; */
 }
-button.tertiary:hover {
+.tertiary:hover {
     @apply bg-[rgba(255,255,255,.1)];
 }
-button.tertiary:focus-visible {
+.tertiary:focus-visible {
     @apply border-transparent;
 }
-button.tertiary:active {
+.tertiary:active {
     @apply bg-[rgba(255,255,255,.2)];
 }
 
-button.tertiary,
-button.secondary,
-button.primary {
+.tertiary,
+.secondary,
+.primary {
     @apply text-base font-medium h-14 flex items-center px-6 transition duration-500 hover:duration-300 justify-center;
 }
-button.tertiary:hover,
-button.secondary:hover,
-button.primary:hover {
+.tertiary:hover,
+.secondary:hover,
+.primary:hover {
     transform: translateY(-2px);
 }
-button.tertiary:focus-visible,
-button.secondary:focus-visible,
-button.primary:focus-visible {
+.tertiary:focus-visible,
+.secondary:focus-visible,
+.primary:focus-visible {
     @apply outline outline-1 outline-white outline-offset-1 rounded-sm;
 }
 
@@ -93,7 +96,7 @@ header {
     @apply py-5 px-8 flex items-center justify-between bg-[rgba(14,22,53,0.4)] fixed top-0 left-0 right-0;
     backdrop-filter: blur(20px);
 }
-header li {
+header a {
     @apply text-[rgba(255,255,255,.6)] tracking-[0.5px] font-medium p-4
   cursor-pointer
   hover:text-white;

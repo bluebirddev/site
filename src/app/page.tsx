@@ -28,9 +28,15 @@ export default function Home() {
             <header className="hidden lg:flex z-10">
                 <Image src={logo} width={168} alt="Picture of the author" />
                 <ol className="hidden lg:flex">
-                    <li>What We Do</li>
-                    <li>Project Showcase</li>
-                    <li>Our People</li>
+                    <li>
+                        <a href="#what-we-do">What We Do</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Project Showcase</a>
+                    </li>
+                    <li>
+                        <a href="#people">Our People</a>
+                    </li>
                 </ol>
                 <div className="hidden lg:flex items-center space-x-4">
                     <button className="tertiary space-x-1.5">
@@ -55,12 +61,10 @@ export default function Home() {
                     resources for you and your team.
                 </p>
                 <div className="gap-x-5 gap-y-3 flex flex-col lg:flex-row w-full lg:w-auto">
-                    <button className="primary" tabIndex={1}>
-                        Quote Calculator
-                    </button>
-                    <button className="secondary" tabIndex={2}>
+                    <button className="primary">Quote Calculator</button>
+                    <a className="secondary scroll-smooth" href="#what-we-do">
                         What We Do
-                    </button>
+                    </a>
                 </div>
             </div>
             <div />

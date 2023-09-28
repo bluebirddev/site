@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat, Nunito_Sans } from 'next/font/google'
 import bg from '../../public/bg.jpeg'
+import bgMobile from '../../public/bg-mobile.jpeg'
 import Image from 'next/image'
 
 const inter = Montserrat({
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className={`${inter.variable} ${sourceSans3.variable}`}>
             <body
-                className={`${inter.className} relative bg-[#0c1534]`}
+                className={`${inter.className} relative bg-[#0c1534] flex justify-center`}
                 style={
                     {
                         // background: 'url(bg.jpeg)',
@@ -36,21 +37,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     }
                 }
             >
-                <Image
-                    src={bg}
-                    alt="Background"
-                    fill
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        zIndex: -1,
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'center',
-                    }}
-                />
+                <div className="hidden lg:block">
+                    <Image
+                        src={bg}
+                        alt="Background"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            // left: 0,
+                            zIndex: -1,
+                            // width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: '100% 0%',
+                        }}
+                    />
+                </div>
+                <div className="lg:hidden">
+                    <Image
+                        src={bgMobile}
+                        alt="Background"
+                        fill
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            // left: 0,
+                            zIndex: -1,
+                            // width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: '100% 0%',
+                        }}
+                    />
+                </div>
                 {children}
             </body>
         </html>
