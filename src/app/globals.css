@@ -2,26 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-size: 16px;
+    @apply text-white;
+}
+
+.container {
+    @apply w-full max-w-[90%] 2xl:max-w-screen-xl;
+}
+
+.pill-heading {
+    font-family: var(--heading);
+    background-image: linear-gradient(225deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.1));
+    @apply text-base leading-[22px] text-center font-light px-4 py-2.5 tracking-[0.5px];
+}
+
+.heading-3 {
+    font-family: var(--heading);
+    @apply text-[20px] leading-[25px] tracking-[0.5px];
+    /* transform: scaleX(1.15); */
+}
+
+.heading-2 {
+    font-family: var(--heading);
+    @apply text-[35px] leading-[40px] lg:text-[42px] lg:leading-[48px] font-bold tracking-[0.5px];
+    /* transform: scaleX(1.15); */
+}
+
+h1 {
+    font-family: var(--heading);
+    @apply text-[40px] leading-[45px] lg:text-[50px] lg:leading-[55px] text-center font-bold max-w-3xl tracking-[0.5px];
+    /* transform: scaleX(1.15); */
+}
+
+p {
+    @apply text-base text-[rgba(255,255,255,0.7)] tracking-[0.5px] font-light;
+}
+
+button.primary {
+    @apply bg-[#f3883c];
+}
+button.primary:active {
+    @apply bg-opacity-80;
+}
+
+button.secondary {
+    @apply border border-white border-opacity-20 bg-white bg-opacity-5;
+}
+button.secondary:hover {
+    @apply bg-opacity-10;
+}
+button.secondary:focus-visible {
+    @apply border-transparent;
+}
+button.secondary:active {
+    @apply bg-opacity-20;
+    /* rgba(34,52,83,0.3)] */
+}
+
+button.tertiary {
+    /* @apply bg-[rgba(14,22,53,0.3)]; */
+}
+button.tertiary:hover {
+    @apply bg-[rgba(255,255,255,.1)];
+}
+button.tertiary:focus-visible {
+    @apply border-transparent;
+}
+button.tertiary:active {
+    @apply bg-[rgba(255,255,255,.2)];
+}
+
+button.tertiary,
+button.secondary,
+button.primary {
+    @apply text-base font-medium h-14 flex items-center px-6 transition duration-500 hover:duration-300 justify-center;
+}
+button.tertiary:hover,
+button.secondary:hover,
+button.primary:hover {
+    transform: translateY(-2px);
+}
+button.tertiary:focus-visible,
+button.secondary:focus-visible,
+button.primary:focus-visible {
+    @apply outline outline-1 outline-white outline-offset-1 rounded-sm;
+}
+
+header {
+    @apply py-5 px-8 flex items-center justify-between bg-[rgba(14,22,53,0.4)] fixed top-0 left-0 right-0;
+    backdrop-filter: blur(20px);
+}
+header li {
+    @apply text-[rgba(255,255,255,.6)] tracking-[0.5px] font-medium p-4
+  cursor-pointer
+  hover:text-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading);
+    @apply tracking-[0.5px];
+}
+
+textarea,
+input {
+    @apply px-6 py-4 border border-white border-opacity-20 bg-transparent outline-none focus:border-opacity-50 text-base w-full text-white placeholder:text-opacity-40 placeholder:text-white placeholder:font-light block;
+}
+input {
+    @apply h-16;
+}
+textarea {
 }
