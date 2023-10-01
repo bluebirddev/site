@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import howWeStarted from '../../public/how-we-started.jpg'
+import howWeStarted from '../../../public/how-we-started.jpg'
 
 export function HowItStarted() {
     return (
-        <div className="mt-48 container backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
-            <div className="lg:flex-1 h-[250px] lg:h-auto relative">
+        <div className="mt-12 lg:mt-48 container backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
+            <div className="lg:flex-1 h-[250px] lg:h-auto relative slide slide-left">
                 <Image
                     src={howWeStarted}
                     alt="how-we-started"
@@ -16,17 +16,17 @@ export function HowItStarted() {
                 />
             </div>
             <div className="lg:w-3/5 flex flex-col items-start">
-                <h3 className="pill-heading">Our Company</h3>
-                <h2 className="heading-2 pt-8">How it all started</h2>
+                <h3 className="pill-heading slide slide-right">Our Company</h3>
+                <h2 className="heading-2 pt-8 slide slide-right">How it all started</h2>
                 <div className="pt-4">
-                    <p className="text-left text-white font-normal">
+                    <p className="text-left text-white font-normal slide slide-right">
                         At Bluebird Technologies, we are on a simple mission: to build timeless,
                         boutique software that endures beyond us. We work across industry,
                         partnering with corporates and founders alike.
                         <br />
                         <br />
                     </p>
-                    <p className="text-left">
+                    <p className="text-left slide slide-right">
                         In 2018, the Bluebird brand took flight with our three founding members and
                         a boatload of ambition. Today, our company is made up of a multi-national
                         team working asynchronously from several global cities, and across
@@ -52,7 +52,7 @@ export function HowItStarted() {
                         tomorrow’s software, we take enormous pride in crafting solutions that
                         embody simplicity, power, sustainability and beauty.
                     </p>
-                    <button className="primary mt-8">Get in Touch</button>
+                    <button className="primary mt-8 slide slide-right">Get in Touch</button>
                 </div>
             </div>
         </div>

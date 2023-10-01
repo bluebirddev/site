@@ -11,7 +11,7 @@ html {
 }
 
 .container {
-    @apply w-full max-w-[90%] 2xl:max-w-screen-xl;
+    @apply w-full max-w-[90%] xl:max-w-[1200px] 2xl:max-w-[1440px];
 }
 
 .pill-heading {
@@ -93,10 +93,9 @@ p {
 }
 
 header {
-    @apply py-5 px-8 flex items-center justify-between bg-[rgba(14,22,53,0.4)] fixed top-0 left-0 right-0;
-    backdrop-filter: blur(20px);
+    @apply py-5 px-8 flex items-center justify-between bg-[rgba(14,22,53,0.4)] fixed top-0 left-0 right-0 backdrop-blur-xl;
 }
-header a {
+header li a {
     @apply text-[rgba(255,255,255,.6)] tracking-[0.5px] font-medium p-4
   cursor-pointer
   hover:text-white;
@@ -121,3 +120,38 @@ input {
 }
 textarea {
 }
+
+::selection {
+    background: #f3883c;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+    transition-property: opacity, transform;
+    transition: all 0.5s ease-in-out;
+}
+.slide.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide.slide-down {
+    transform: translateY(-50px);
+}
+
+.slide.slide-up {
+    transform: translateY(50px);
+}
+.slide.slide-right {
+    transform: translateX(50px);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px);
+}
+
+/* .slide-down.active {
+    opacity: 1;
+    transform: translateY(0px);
+} */

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Montserrat, Nunito_Sans } from 'next/font/google'
 import bg from '../../public/bg.jpeg'
 import Image from 'next/image'
+import Script from 'next/script'
 
 const inter = Montserrat({
     subsets: ['latin'],
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className={`${inter.variable} ${sourceSans3.variable}`}>
             <body
-                className={`${inter.className} relative bg-[#0c1534] flex justify-center`}
+                className={`${inter.className} relative bg-[#0c1534] flex justify-center no-js`}
                 style={
                     {
                         // background: 'url(bg.jpeg)',
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     src={bg}
                     className="hidden sm:block"
                     alt="Background"
+                    quality={90}
                     style={{
                         position: 'absolute',
                         top: 0,
@@ -49,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         // width: '100%',
                         height: '100%',
                         objectFit: 'cover',
-                        objectPosition: '100% 0%',
+                        objectPosition: '50% 0%',
                     }}
                 />
                 {/* </div> */}
@@ -58,19 +60,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         className="absolute top-0 h-full w-full z-[-1]"
                         style={{
                             backgroundImage: `repeating-linear-gradient(
-                            to bottom,
+                            165deg,
                             rgb(13,22,53),
                             rgb(13,22,53),
                             rgb(20,108,232),
                             rgb(18,38,111),
                             rgb(24,41,133),
                             rgb(13,22,53) 4000px
-                          )`,
+                          ), url(https://grainy-gradients.vercel.app/noise.svg)`,
                         }}
+                        // 0deg,
+                        //     rgb(13,22,53),
+                        //     rgb(13,22,53),
+                        //     rgb(20,108,232),
+                        //     rgb(18,38,111),
+                        //     rgb(24,41,133),
+                        //     rgb(13,22,53) 4000px
                     ></div>
                 </div>
                 {children}
             </body>
+
+            <Script src="./script.js" />
         </html>
     )
 }

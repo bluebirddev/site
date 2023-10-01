@@ -1,26 +1,26 @@
 import Image from 'next/image'
 import Marquee from 'react-fast-marquee'
 // 1
-import angular from '../../public/tech-stack/1/angular.svg'
-import django from '../../public/tech-stack/1/django.svg'
-import dotNet from '../../public/tech-stack/1/dot-net.svg'
-import illustrator from '../../public/tech-stack/1/illustrator.svg'
-import xd from '../../public/tech-stack/1/xd.svg'
+import angular from '../../../public/tech-stack/1/angular.svg'
+import django from '../../../public/tech-stack/1/django.svg'
+import dotNet from '../../../public/tech-stack/1/dot-net.svg'
+import illustrator from '../../../public/tech-stack/1/illustrator.svg'
+import xd from '../../../public/tech-stack/1/xd.svg'
 // 2
-import figma from '../../public/tech-stack/2/figma.svg'
-import ionic from '../../public/tech-stack/2/ionic.svg'
-import rn from '../../public/tech-stack/2/react-native.svg'
-import xamarin from '../../public/tech-stack/2/xamarin.svg'
+import figma from '../../../public/tech-stack/2/figma.svg'
+import ionic from '../../../public/tech-stack/2/ionic.svg'
+import rn from '../../../public/tech-stack/2/react-native.svg'
+import xamarin from '../../../public/tech-stack/2/xamarin.svg'
 // 3
-import java from '../../public/tech-stack/3/java.svg'
-import node from '../../public/tech-stack/3/node.svg'
-import nosql from '../../public/tech-stack/3/nosql.svg'
-import vue from '../../public/tech-stack/3/vue.svg'
+import java from '../../../public/tech-stack/3/java.svg'
+import node from '../../../public/tech-stack/3/node.svg'
+import nosql from '../../../public/tech-stack/3/nosql.svg'
+import vue from '../../../public/tech-stack/3/vue.svg'
 // 4
-import flutter from '../../public/tech-stack/4/flutter.svg'
-import sql from '../../public/tech-stack/4/sql.svg'
-import webflow from '../../public/tech-stack/4/webflow.svg'
-import wordpress from '../../public/tech-stack/4/wordpress.svg'
+import flutter from '../../../public/tech-stack/4/flutter.svg'
+import sql from '../../../public/tech-stack/4/sql.svg'
+import webflow from '../../../public/tech-stack/4/webflow.svg'
+import wordpress from '../../../public/tech-stack/4/wordpress.svg'
 
 const row1 = [
     {
@@ -103,7 +103,7 @@ export function OurTechStack() {
     return (
         <>
             <div className="mt-12 lg:mt-48 container flex flex-col-reverse lg:flex-row gap-14 backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 p-8 lg:px-14 lg:py-20">
-                <div className="space-y-5 lg:flex-1 min-w-0">
+                <div className="space-y-5 lg:flex-1 min-w-0 slide slide-left">
                     {[row1, row2, row3, row4].map((rows, rowIndex) => (
                         <Marquee key={rowIndex} direction={rowIndex % 2 === 0 ? 'left' : 'right'}>
                             {rows.map((item) => (
@@ -122,11 +122,11 @@ export function OurTechStack() {
                     ))}
                 </div>
                 <div className="flex flex-col items-start space-y-8 lg:flex-1 min-w-0">
-                    <h3 className="pill-heading">Our Tech Stack</h3>
-                    <h2 className="heading-2">
+                    <h3 className="pill-heading slide slide-right">Our Tech Stack</h3>
+                    <h2 className="heading-2 slide slide-right">
                         Bluebird is your new <em>Technology Partner</em>
                     </h2>
-                    <p className="text-left">
+                    <p className="text-left slide slide-right">
                         At Bluebird we leverage a cutting-edge and versatile tech stack,
                         incorporating modern technologies while embracing proven frameworks and
                         tools.

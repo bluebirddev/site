@@ -47,15 +47,15 @@ const CARDS = [
 
 export function WhatWeDo() {
     return (
-        <div className="pt-40 container" id="what-we-do">
+        <div className="mt-8 pt-28 lg:pt-32 container" id="what-we-do">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <div className="flex flex-col items-start space-y-8">
+                <div className="flex flex-col items-start space-y-8 slide slide-left">
                     <h3 className="pill-heading">What We Do</h3>
                     <h2 className="heading-2">
                         Bluebird is your new <em>Technology Partner</em>
                     </h2>
                 </div>
-                <p className="h-full flex flex-col justify-end text-left">
+                <p className="h-full flex flex-col justify-end text-left slide slide-right">
                     We offer exclusive consulting, development and design resources for some of the
                     world’s most innovative, enduring systems.
                 </p>
@@ -63,7 +63,7 @@ export function WhatWeDo() {
             <div className="pt-12 lg:pt-32 flex flex-col lg:flex-row flex-wrap justify-center gap-y-4 lg:gap-x-4 lg:gap-y-12">
                 {CARDS.map((card) => (
                     <div
-                        className="border w-full lg:w-[280px] border-white border-opacity-10 backdrop-blur-md p-6 bg-[rgba(14,22,53,.4)]"
+                        className="border w-full lg:w-[280px] border-white border-opacity-10 backdrop-blur-md p-6 bg-[rgba(14,22,53,.4)] slide slide-up"
                         key={card.title}
                     >
                         <div className="h-12 w-12 border border-white border-opacity-10 bg-white bg-opacity-10 flex items-center justify-center">

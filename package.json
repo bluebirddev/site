@@ -2,6 +2,9 @@
     "name": "site_site",
     "version": "0.1.0",
     "private": true,
+    "engine": {
+        "node": "x20"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",

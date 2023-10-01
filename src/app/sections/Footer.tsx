@@ -1,14 +1,16 @@
 import Image from 'next/image'
-import logo from '../../public/logo.svg'
-import email from '../../public/footer/email.svg'
-import location from '../../public/footer/location.svg'
+import logo from '../../../public/logo.svg'
+import email from '../../../public/footer/email.svg'
+import location from '../../../public/footer/location.svg'
 
 export function Footer() {
     return (
-        <footer className="container py-20">
+        <footer className="container py-20 slide slide-up">
             <div className="flex flex-col lg:grid grid-cols-5 gap-[70px] pb-16">
                 <div className="col-span-2 space-y-6">
-                    <Image src={logo} alt="logo" width={210} />
+                    <a href="#intro" className="block hover:scale-90 transition">
+                        <Image src={logo} alt="logo" width={210} />
+                    </a>
                     <h5 className="text-xl max-w-xs">
                         Building Innovative Software with Style and Simplicity
                     </h5>
@@ -16,14 +18,29 @@ export function Footer() {
                 <div className="col-span-1">
                     <h5 className="text-2xl">Quick Links</h5>
                     <ul className="font-medium  space-y-8 mt-8">
-                        <li className="hover:text-opacity-100 text-white text-opacity-60">
-                            What We Do
+                        <li>
+                            <a
+                                href="#what-we-do"
+                                className="hover:text-opacity-100 text-white text-opacity-60"
+                            >
+                                What We Do
+                            </a>
                         </li>
-                        <li className="hover:text-opacity-100 text-white text-opacity-60">
-                            Project Showcase
+                        <li>
+                            <a
+                                href="#projects"
+                                className="hover:text-opacity-100 text-white text-opacity-60"
+                            >
+                                Project Showcase
+                            </a>
                         </li>
-                        <li className="hover:text-opacity-100 text-white text-opacity-60">
-                            Our Peopl
+                        <li>
+                            <a
+                                href="#people"
+                                className="hover:text-opacity-100 text-white text-opacity-60"
+                            >
+                                Our People
+                            </a>
                         </li>
                     </ul>
                 </div>
