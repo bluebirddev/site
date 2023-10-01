@@ -10,7 +10,7 @@ export function MobileHeader() {
     const [isOpen, setOpen] = useState(false)
 
     return (
-        <div className="block lg:hidden">
+        <div className="block lg:hidden slide slide-right">
             <div
                 className={clsx(
                     'fixed left-0 right-0 h-screen bg-[rgba(14,22,53)] transition z-10',
