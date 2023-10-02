@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Montserrat, Nunito_Sans } from 'next/font/google'
 import bg from '../../public/bg.jpeg'
 import Image from 'next/image'
+import Script from 'next/script'
 
 const inter = Montserrat({
     subsets: ['latin'],
@@ -26,18 +27,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className={`${inter.variable} ${sourceSans3.variable}`}>
-            <body
-                className={`${inter.className} relative bg-[#0c1534] flex justify-center no-js`}
-                style={
-                    {
-                        // background: 'url(bg.jpeg)',
-                        // backgroundColor: '#0e1635',
-                        // backgroundPosition: '50% 0',
-                        // backgroundRepeat: 'no-repeat',
-                    }
-                }
-            >
-                {/* <div className="flex sm:block w-full absolute inset-0"> */}
+            <body className={`${inter.className} relative bg-[#0c1534] flex justify-center no-js`}>
                 <Image
                     src={bg}
                     className="hidden sm:block"
@@ -46,9 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     style={{
                         position: 'absolute',
                         top: 0,
-                        // left: 0,
                         zIndex: -1,
-                        // width: '100%',
                         height: '100%',
                         objectFit: 'cover',
                         objectPosition: '50% 0%',
@@ -69,17 +57,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             rgb(13,22,53) 4000px
                           ), url(https://grainy-gradients.vercel.app/noise.svg)`,
                         }}
-                        // 0deg,
-                        //     rgb(13,22,53),
-                        //     rgb(13,22,53),
-                        //     rgb(20,108,232),
-                        //     rgb(18,38,111),
-                        //     rgb(24,41,133),
-                        //     rgb(13,22,53) 4000px
                     ></div>
                 </div>
                 {children}
             </body>
+
+            <Script src="./script.js" />
         </html>
     )
 }

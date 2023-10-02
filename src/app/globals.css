@@ -23,19 +23,17 @@ html {
 .heading-3 {
     font-family: var(--heading);
     @apply text-[20px] leading-[25px] tracking-[0.5px];
-    /* transform: scaleX(1.15); */
 }
 
 .heading-2 {
     font-family: var(--heading);
     @apply text-[35px] leading-[40px] lg:text-[42px] lg:leading-[48px] font-bold tracking-[0.5px];
-    /* transform: scaleX(1.15); */
 }
 
 h1 {
     font-family: var(--heading);
-    @apply text-[40px] leading-[45px] lg:text-[50px] lg:leading-[55px] text-center font-bold max-w-3xl tracking-[0.5px];
-    /* transform: scaleX(1.15); */
+    @apply text-[40px] leading-[45px] lg:text-[50px] lg:leading-[55px]
+        text-center font-bold max-w-3xl tracking-[0.5px];
 }
 
 p {
@@ -60,11 +58,9 @@ p {
 }
 .secondary:active {
     @apply bg-opacity-20;
-    /* rgba(34,52,83,0.3)] */
 }
 
 .tertiary {
-    /* @apply bg-[rgba(14,22,53,0.3)]; */
 }
 .tertiary:hover {
     @apply bg-[rgba(255,255,255,.1)];
@@ -79,7 +75,8 @@ p {
 .tertiary,
 .secondary,
 .primary {
-    @apply text-base font-medium h-14 flex items-center px-6 transition duration-500 hover:duration-300 justify-center;
+    @apply text-base font-medium h-14 flex items-center px-6 transition
+        duration-500 hover:duration-300 justify-center;
 }
 .tertiary:hover,
 .secondary:hover,
@@ -93,12 +90,12 @@ p {
 }
 
 header {
-    @apply py-5 px-8 flex items-center justify-between bg-[rgba(14,22,53,0.4)] fixed top-0 left-0 right-0 backdrop-blur-xl;
+    @apply py-5 px-8 flex items-center justify-between bg-[rgba(14,22,53,0.4)]
+        fixed top-0 left-0 right-0 backdrop-blur-xl;
 }
 header li a {
-    @apply text-[rgba(255,255,255,.6)] tracking-[0.5px] font-medium p-4
-  cursor-pointer
-  hover:text-white;
+    @apply text-[rgba(255,255,255,.6)] tracking-[0.5px] font-medium p-4 cursor-pointer
+        hover:text-white;
 }
 
 h1,
@@ -113,7 +110,10 @@ h6 {
 
 textarea,
 input {
-    @apply px-6 py-4 border border-white border-opacity-20 bg-transparent outline-none focus:border-opacity-50 text-base w-full text-white placeholder:text-opacity-40 placeholder:text-white placeholder:font-light block;
+    @apply px-6 py-4 border border-white border-opacity-20 bg-transparent
+        outline-none text-base w-full text-white block
+        focus:border-opacity-50
+        placeholder:text-white placeholder:font-light placeholder:text-opacity-40;
 }
 input {
     @apply h-16;
@@ -125,33 +125,31 @@ textarea {
     background: #f3883c;
 }
 
-/* .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
-    transition-property: opacity, transform;
-    transition: all 0.5s ease-in-out;
-}
-.slide.slide-left {
-    transform: translateX(-50px);
-}
+/**
+ * Slide
+ */
+@media screen and (min-width: 1024px) {
+    .slide {
+        opacity: 0;
+        transition-duration: 1s ease;
+        transition-property: opacity, transform;
+        transition: all 0.5s ease-in-out;
+    }
+    .slide.active {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) !important;
+    }
 
-.slide.slide-down {
-    transform: translateY(-50px);
+    .slide.slide-left {
+        transform: translateX(-50px);
+    }
+    .slide.slide-down {
+        transform: translateY(-50px);
+    }
+    .slide.slide-up {
+        transform: translateY(50px);
+    }
+    .slide.slide-right {
+        transform: translateX(50px);
+    }
 }
-
-.slide.slide-up {
-    transform: translateY(50px);
-}
-.slide.slide-right {
-    transform: translateX(50px);
-}
-
-.slide.active {
-    opacity: 1;
-    transform: translateX(0px) translateY(0px);
-} */
-
-/* .slide-down.active {
-    opacity: 1;
-    transform: translateY(0px);
-} */
