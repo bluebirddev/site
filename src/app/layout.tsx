@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Montserrat, Nunito_Sans } from 'next/font/google'
 import bg from '../../public/bg.jpeg'
 import Image from 'next/image'
-// import Script from 'next/script'
 
 const inter = Montserrat({
     subsets: ['latin'],
@@ -81,8 +80,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
                 {children}
             </body>
-
-            {/* <Script src="./script.js" /> */}
         </html>
     )
 }
