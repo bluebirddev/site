@@ -125,7 +125,7 @@ textarea {
     background: #f3883c;
 }
 
-.slide {
+/* .slide {
     opacity: 0;
     transition-duration: 1s ease;
     transition-property: opacity, transform;
@@ -149,7 +149,7 @@ textarea {
 .slide.active {
     opacity: 1;
     transform: translateX(0px) translateY(0px);
-}
+} */
 
 /* .slide-down.active {
     opacity: 1;

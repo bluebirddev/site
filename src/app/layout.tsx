@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {children}
             </body>
 
-            <Script src="./script.js" />
+            {/* <Script src="./script.js" /> */}
         </html>
     )
 }
