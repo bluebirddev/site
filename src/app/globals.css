@@ -4,7 +4,7 @@
 
 body {
     font-size: 16px;
-    @apply text-white;
+    @apply text-white overflow-x-hidden;
 }
 html {
     @apply scroll-smooth;
