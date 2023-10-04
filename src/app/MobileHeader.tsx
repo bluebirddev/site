@@ -1,9 +1,13 @@
 'use client'
 import Image from 'next/image'
-
 import { useState } from 'react'
-import { HEIGHT } from './Header'
 import clsx from 'clsx'
+
+import calculator from '@/images/calculator.svg'
+import close from '@/images/close.svg'
+import hamburger from '@/images/hamburger.svg'
+
+import { HEADER_HEIGHT } from './Header'
 import { sections } from './header_sections'
 
 export function MobileHeader() {
@@ -20,7 +24,7 @@ export function MobileHeader() {
                     },
                 )}
                 style={{
-                    top: HEIGHT,
+                    top: HEADER_HEIGHT,
                 }}
             >
                 <div
@@ -35,17 +39,17 @@ export function MobileHeader() {
                                 <a
                                     href={`#${section.id}`}
                                     onClick={() => setOpen(false)}
-                                    className="py-5 block"
+                                    className="py-5 block btn-tertiary"
                                 >
                                     {section.label}
                                 </a>
                             </li>
                         ))}
                         <li>
-                            <a className="secondary py-5 block" onClick={() => setOpen(false)}>
+                            <a className="btn-secondary py-5 block" onClick={() => setOpen(false)}>
                                 Quote Calculator
                                 <Image
-                                    src="/calculator.svg"
+                                    src={calculator}
                                     height={20}
                                     width={20}
                                     alt="Picture of the author"
@@ -55,7 +59,7 @@ export function MobileHeader() {
                         <li>
                             <a
                                 href="#contact-us"
-                                className="primary py-5 block"
+                                className="btn-primary py-5 block"
                                 onClick={() => setOpen(false)}
                             >
                                 Contact us
@@ -75,14 +79,9 @@ export function MobileHeader() {
                 onClick={() => setOpen(!isOpen)}
             >
                 {isOpen ? (
-                    <Image src="/close.svg" width={40} height={40} alt="Picture of the author" />
+                    <Image src={close} width={40} height={40} alt="Close" />
                 ) : (
-                    <Image
-                        src="/hamburger.svg"
-                        width={40}
-                        height={40}
-                        alt="Picture of the author"
-                    />
+                    <Image src={hamburger} width={40} height={40} alt="Open" />
                 )}
             </button>
         </div>

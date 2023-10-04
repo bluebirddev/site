@@ -1,17 +1,19 @@
 import './globals.css'
+
 import type { Metadata } from 'next'
 import { Montserrat, Nunito_Sans } from 'next/font/google'
-import bg from '../../public/bg.jpeg'
 import Image from 'next/image'
 import Script from 'next/script'
 
-const inter = Montserrat({
+import bg from '@/images/bg.jpeg'
+
+const bodyFont = Montserrat({
     subsets: ['latin'],
     weight: ['300', '400', '500', '700'],
     variable: '--body',
 })
 
-const sourceSans3 = Nunito_Sans({
+const headingFont = Nunito_Sans({
     subsets: ['latin'],
     weight: ['300', '500', '700'],
     style: ['italic', 'normal'],
@@ -20,6 +22,7 @@ const sourceSans3 = Nunito_Sans({
 
 const description =
     'Bluebird Development provides exclusive consulting, development, and design resources for you and your team.'
+
 const title = 'Bluebird - Home'
 
 export const metadata: Metadata = {
@@ -40,8 +43,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={`${inter.variable} ${sourceSans3.variable}`}>
-            <body className={`${inter.className} relative bg-[#0c1534] flex justify-center no-js`}>
+        // Injects the variables in the <html> tag, so that they can be used in CSS, as in `var(--body)`
+        <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`}>
+            <body className="relative bg-primary flex justify-center">
+                {/* Use background image overlay for desktop */}
                 <Image
                     src={bg}
                     className="hidden sm:block"
@@ -56,7 +61,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         objectPosition: '50% 0%',
                     }}
                 />
-                {/* </div> */}
+
+                {/* Don't use overlay image for mobile, since the quality of a low size image is noticable. Rather use a custom gradient background. */}
                 <div className="sm:hidden">
                     <div
                         className="absolute top-0 h-full w-full z-[-1]"
@@ -69,14 +75,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             rgb(18,38,111),
                             rgb(24,41,133),
                             rgb(13,22,53) 4000px
-                          ), url(https://grainy-gradients.vercel.app/noise.svg)`,
+                          )`,
                         }}
                     ></div>
                 </div>
                 {children}
             </body>
 
-            <Script src="./script.js" />
+            {/* Fade script */}
+            <Script src="./fade-script.js" />
         </html>
     )
 }

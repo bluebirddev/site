@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import logo from '../../../public/logo.svg'
-import email from '../../../public/footer/email.svg'
-import location from '../../../public/footer/location.svg'
+import logo from '@/images/logo.svg'
+import email from '@/images/footer/email.svg'
+import location from '@/images/footer/location.svg'
 
 export function Footer() {
     return (
-        <footer className="container py-20 slide slide-up">
+        <footer className="container py-20 fade fade-up">
             <div className="flex flex-col lg:grid grid-cols-5 gap-[70px] pb-16">
                 <div className="col-span-2 space-y-6">
                     <a href="#intro" className="block hover:scale-90 transition">

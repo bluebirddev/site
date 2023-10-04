@@ -35,6 +35,7 @@
         "postcss": "latest",
         "prettier": "latest",
         "tailwindcss": "latest",
-        "typescript": "latest"
+        "typescript": "latest",
+        "sass": "latest"
     }
 }

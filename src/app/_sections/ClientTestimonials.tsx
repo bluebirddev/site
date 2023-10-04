@@ -4,11 +4,11 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import Image from 'next/image'
 
-import alex from '../../../public/testimonials/alex.png'
-import danielle from '../../../public/testimonials/danielle.jpeg'
-import michail from '../../../public/testimonials/michail.jpeg'
-import philip from '../../../public/testimonials/philip.jpg'
-import stefan from '../../../public/testimonials/stefan.png'
+import alex from '@/images/testimonials/alex.png'
+import danielle from '@/images/testimonials/danielle.jpeg'
+import michail from '@/images/testimonials/michail.jpeg'
+import philip from '@/images/testimonials/philip.jpg'
+import stefan from '@/images/testimonials/stefan.png'
 
 const blocks = [
     {
@@ -65,19 +65,19 @@ export function ClientTestimonials() {
     }
 
     return (
-        <div className="w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-48 ">
+        <section className="w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-48 ">
             <div className="space-y-8 flex flex-col items-center pb-24 px-4">
-                <h3 className="pill-heading slide slide-left">Client Testimonials</h3>
-                <h2 className="heading-2 text-center slide slide-left">
+                <h3 className="pill-heading fade fade-left">Client Testimonials</h3>
+                <h2 className=" text-center fade fade-left">
                     <em>Working</em> with Bluebird
                 </h2>
             </div>
-            <div className="w-full lg:w-[780px] relative slide slide-right">
+            <div className="w-full md:max-w-[90%] lg:w-[780px] relative fade fade-right">
                 <div className="absolute inset-0 mx-auto flex items-center">
                     <button
                         className={
                             'absolute left-[4px] lg:left-[-4px] z-10 h-12 w-12 lg:h-14 lg:w-14 rounded-full bg-white flex items-center justify-center transition ' +
-                            'enabled:hover:bg-neutral-100 enabled:active:bg-neutral-200'
+                            'hover:bg-neutral-200 active:bg-neutral-300'
                         }
                         onClick={() => setIndex(index - 1)}
                     >
@@ -86,7 +86,7 @@ export function ClientTestimonials() {
                     <button
                         className={
                             'absolute right-[4px] lg:right-[-4px] z-10 h-12 w-12 lg:h-14 lg:w-14 rounded-full bg-white flex items-center justify-center transition ' +
-                            'enabled:hover:bg-neutral-100 enabled:active:bg-neutral-200'
+                            'hover:bg-neutral-200 active:bg-neutral-300'
                         }
                         onClick={() => setIndex(index + 1)}
                     >
@@ -104,13 +104,7 @@ export function ClientTestimonials() {
                     <div className="h-full w-full" />
                     {blocks.map((block, i) => {
                         const adjIndex = getIndex(i - index, blocks.length)
-                        console.log({
-                            i,
-                            adjIndex,
-                            shouldTrans: adjIndex > 0 && adjIndex < ADJACENT_ITEMS * 2,
-                            index,
-                            arr: getIndex(index, blocks.length),
-                        })
+
                         return (
                             <div
                                 key={i}
@@ -169,6 +163,6 @@ export function ClientTestimonials() {
                     })}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

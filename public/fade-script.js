@@ -1,4 +1,4 @@
-function onAppLoad() {
+function fadeScript() {
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -7,11 +7,11 @@ function onAppLoad() {
         })
     })
 
-    const slides = document.querySelectorAll('.slide')
+    const slides = document.querySelectorAll('.fade')
 
-    slides.forEach((slide) => {
-        observer.observe(slide)
+    slides.forEach((fade) => {
+        observer.observe(fade)
     })
 }
 
-onAppLoad()
+fadeScript()

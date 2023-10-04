@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import cj from '../../../public/who-we-are/cj.jpg'
-import rikus from '../../../public/who-we-are/rikus.jpg'
-import wester from '../../../public/who-we-are/wester.jpg'
-import nick from '../../../public/who-we-are/nick.jpg'
+import cj from '@/images/who-we-are/cj.jpg'
+import rikus from '@/images/who-we-are/rikus.jpg'
+import wester from '@/images/who-we-are/wester.jpg'
+import nick from '@/images/who-we-are/nick.jpg'
 
-import linkedin from '../../../public/linkedin.svg'
-import fb from '../../../public/fb.svg'
-import insta from '../../../public/insta.svg'
+import linkedin from '@/images/linkedin.svg'
+import fb from '@/images/fb.svg'
+import insta from '@/images/insta.svg'
 
 const blocks = [
     {
@@ -57,14 +57,14 @@ export function OurPeople() {
             id="people"
         >
             <div className="space-y-8 flex flex-col items-center pb-12 lg:pb-24">
-                <h3 className="pill-heading slide slide-left">Our People</h3>
-                <h2 className="heading-2 slide slide-left">The minds behind Bluebird</h2>
+                <h3 className="pill-heading fade fade-left">Our People</h3>
+                <h2 className=" fade fade-left">The minds behind Bluebird</h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-5">
                 {blocks.map((block) => (
                     <div
                         key={block.person}
-                        className="min-h-[620px] backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 slide slide-up"
+                        className="min-h-[620px] backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 fade fade-up"
                     >
                         <div className="h-[300px] md:h-[250px] relative">
                             <Image
