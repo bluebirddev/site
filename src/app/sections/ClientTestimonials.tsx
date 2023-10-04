@@ -2,14 +2,13 @@
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/20/solid'
 import clsx from 'clsx'
 import { useState } from 'react'
+import Image from 'next/image'
 
 import alex from '../../../public/testimonials/alex.png'
 import danielle from '../../../public/testimonials/danielle.jpeg'
 import michail from '../../../public/testimonials/michail.jpeg'
 import philip from '../../../public/testimonials/philip.jpg'
 import stefan from '../../../public/testimonials/stefan.png'
-import Image from 'next/image'
-import { times } from '@/utils'
 
 const blocks = [
     {
@@ -53,33 +52,18 @@ function getIndex(index: number, length: number) {
     if (index < 0) return getIndex(length + index, length)
     return index % length
 }
-/**
- * Given a list of items, return the items adjacent to the given index.
- * Note that overflow index should be handled.
- * @param arr - the list
- * @param index - the current index of the list (can overflow)
- * @param adjacentItems - the amount of adjacent items to return on boths sides. ie. If adjacentItems = 2, return 5 items: 2 before, 1 current, 2 after
- */
-function getAdjacentItems<T>(arr: T[], index: number, adjacentItems: number = 2) {
-    const count = adjacentItems * 2 + 1
-    return times(count, (i) => {
-        const overflow = index + i - adjacentItems
-        return arr[getIndex(overflow, arr.length)]
-    })
-}
-
 const ADJACENT_ITEMS = 2
 
 export function ClientTestimonials() {
     const [index, _setIndex] = useState(0)
     const [direction, setDirection] = useState<'left' | 'right' | undefined>(undefined)
-    console.log('a', getAdjacentItems(blocks, index, 2))
+
     function setIndex(newIndex: number) {
         if (newIndex > index) setDirection('right')
         else if (newIndex < index) setDirection('left')
-        else setDirection(undefined)
         _setIndex(newIndex)
     }
+
     return (
         <div className="w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-48 ">
             <div className="space-y-8 flex flex-col items-center pb-24 px-4">
@@ -110,7 +94,7 @@ export function ClientTestimonials() {
                     </button>
                 </div>
                 <div
-                    className="whitespace-nowrap w-full transition duration-700 ease-out relative lg:h-[400px]"
+                    className="whitespace-nowrap w-full transition duration-700 ease-out relative h-[600px] sm:h-[500px] lg:h-[400px]"
                     style={
                         {
                             // transform: `translateX(calc(${0 - index * 100}%))`,
@@ -124,12 +108,14 @@ export function ClientTestimonials() {
                             i,
                             adjIndex,
                             shouldTrans: adjIndex > 0 && adjIndex < ADJACENT_ITEMS * 2,
+                            index,
+                            arr: getIndex(index, blocks.length),
                         })
                         return (
                             <div
                                 key={i}
                                 className={clsx('inline-block w-full px-6 absolute top-0 h-full', {
-                                    'bg-opacity-20': i !== index,
+                                    'opacity-20': adjIndex !== ADJACENT_ITEMS,
                                     'transition-all duration-700':
                                         (adjIndex > 0 && adjIndex < ADJACENT_ITEMS * 2) ||
                                         (direction === 'left' && adjIndex === ADJACENT_ITEMS * 2) ||
@@ -145,12 +131,14 @@ export function ClientTestimonials() {
                                     <div
                                         className={clsx(
                                             'absolute top-[-36px] bg-[#f3883c] h-16 w-16 rounded-full flex items-center justify-center text-[80px] transition duration-700',
-                                            { 'opacity-0': i !== index },
+                                            {
+                                                'opacity-0': adjIndex !== ADJACENT_ITEMS,
+                                            },
                                         )}
                                     >
                                         <span className="mt-10">“</span>
                                     </div>
-                                    <p className="text-left max-w-full whitespace-normal">
+                                    <p className="text-left max-w-full whitespace-normal flex-1 overflow-y-auto">
                                         {block.testimonial}
                                     </p>
                                     <div className="mt-auto flex lg:flex-row flex-col w-full gap-x-6 lg:items-center lg:pt-0 pt-12">

@@ -3,7 +3,7 @@ import howWeStarted from '../../../public/how-we-started.jpg'
 
 export function HowItStarted() {
     return (
-        <div className="mt-12 lg:mt-48 container backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
+        <div className="mt-24 lg:mt-48 container backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
             <div className="lg:flex-1 h-[250px] lg:h-auto relative slide slide-left">
                 <Image
                     src={howWeStarted}
@@ -52,7 +52,11 @@ export function HowItStarted() {
                         tomorrow’s software, we take enormous pride in crafting solutions that
                         embody simplicity, power, sustainability and beauty.
                     </p>
-                    <button className="primary mt-8 slide slide-right">Get in Touch</button>
+                    <div className="mt-8 flex">
+                        <a className="primary slide slide-right" href="#contact-us">
+                            Get in Touch
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
