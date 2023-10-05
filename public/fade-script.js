@@ -19,6 +19,10 @@ function createIntersectionObserver() {
 function fadeScript() {
     let observer = createIntersectionObserver()
 
+    /**
+     * Whenever a route change, recreate the intersection observer, which is used to
+     * inject the fade-in animation on the page.
+     */
     let previousUrl = ''
     const observer2 = new MutationObserver(function () {
         if (location.href !== previousUrl) {

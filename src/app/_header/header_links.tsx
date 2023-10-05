@@ -1,4 +1,4 @@
-export const sections = [
+export const headerLinks = [
     {
         id: 'what-we-do',
         label: 'What We Do',

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import howWeStarted from '@/images/how-we-started.jpg'
+import Link from 'next/link'
 
 export function HowItStarted() {
     return (
@@ -53,9 +54,9 @@ export function HowItStarted() {
                         embody simplicity, power, sustainability and beauty.
                     </p>
                     <div className="mt-8 flex">
-                        <a className="btn-primary fade fade-right" href="#contact-us">
+                        <Link className="btn-primary fade fade-right" href="/#contact-us">
                             Get in Touch
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

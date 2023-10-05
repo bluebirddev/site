@@ -8,7 +8,7 @@ import close from '@/images/close.svg'
 import hamburger from '@/images/hamburger.svg'
 
 import { HEADER_HEIGHT } from './Header'
-import { sections } from './header_sections'
+import { headerLinks } from './header_links'
 import Link from 'next/link'
 
 export function MobileHeader() {
@@ -35,7 +35,7 @@ export function MobileHeader() {
                     }}
                 >
                     <ul className="text-white text-center space-y-3">
-                        {sections.map((section) => (
+                        {headerLinks.map((section) => (
                             <li key={section.id}>
                                 <Link
                                     href={`/#${section.id}`}

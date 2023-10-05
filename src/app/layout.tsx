@@ -6,8 +6,8 @@ import Image from 'next/image'
 import Script from 'next/script'
 
 import bg from '@/images/bg.jpeg'
-import { Header } from './Header'
-import { Footer } from './_sections/Footer'
+import { Header } from './_header/Header'
+import { Footer } from './_footer/Footer'
 
 const bodyFont = Montserrat({
     subsets: ['latin'],

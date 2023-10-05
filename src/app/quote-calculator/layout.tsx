@@ -33,7 +33,11 @@ export default function QuoteCalculatorPage({ children }: { children: React.Reac
                                 alt="Picture of the author"
                             />
                         </Link>
-                        <Link className="btn-secondary" href="/quote-calculator/resource">
+                        <Link
+                            className="btn-secondary"
+                            href="/quote-calculator/resource"
+                            scroll={false}
+                        >
                             Find a Particular Resource
                         </Link>
                     </>

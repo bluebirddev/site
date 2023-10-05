@@ -4,7 +4,7 @@ import logo from '@/images/logo.svg'
 import calculator from '@/images/calculator.svg'
 
 import { MobileHeader } from './MobileHeader'
-import { sections } from './header_sections'
+import { headerLinks } from './header_links'
 import Link from 'next/link'
 
 export const HEADER_HEIGHT = 96
@@ -23,7 +23,7 @@ export function Header() {
                     <Image src={logo} width={168} alt="Picture of the author" />
                 </Link>
                 <ol className="hidden lg:flex">
-                    {sections.map((section) => (
+                    {headerLinks.map((section) => (
                         <li key={section.id}>
                             <Link
                                 href={`/#${section.id}`}
