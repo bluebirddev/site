@@ -1,7 +1,4 @@
-'use client'
-import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/20/solid'
-import clsx from 'clsx'
-import { useState } from 'react'
+import { Fragment } from 'react'
 import Image from 'next/image'
 
 import alex from '@/images/testimonials/alex.png'
@@ -9,6 +6,7 @@ import danielle from '@/images/testimonials/danielle.jpeg'
 import michail from '@/images/testimonials/michail.jpeg'
 import philip from '@/images/testimonials/philip.jpg'
 import stefan from '@/images/testimonials/stefan.png'
+import { Carousel } from '@/components/carousel'
 
 const blocks = [
     {
@@ -48,22 +46,7 @@ const blocks = [
     },
 ]
 
-function getIndex(index: number, length: number) {
-    if (index < 0) return getIndex(length + index, length)
-    return index % length
-}
-const ADJACENT_ITEMS = 2
-
 export function ClientTestimonials() {
-    const [index, _setIndex] = useState(0)
-    const [direction, setDirection] = useState<'left' | 'right' | undefined>(undefined)
-
-    function setIndex(newIndex: number) {
-        if (newIndex > index) setDirection('right')
-        else if (newIndex < index) setDirection('left')
-        _setIndex(newIndex)
-    }
-
     return (
         <section className="w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-48 ">
             <div className="space-y-8 flex flex-col items-center pb-24 px-4">
@@ -72,97 +55,40 @@ export function ClientTestimonials() {
                     <em>Working</em> with Bluebird
                 </h2>
             </div>
-            <div className="w-full md:max-w-[90%] lg:w-[780px] relative fade fade-right">
-                <div className="absolute inset-0 mx-auto flex items-center">
-                    <button
-                        className={
-                            'absolute left-[4px] lg:left-[-4px] z-10 h-12 w-12 lg:h-14 lg:w-14 rounded-full bg-white flex items-center justify-center transition ' +
-                            'hover:bg-neutral-200 active:bg-neutral-300'
-                        }
-                        onClick={() => setIndex(index - 1)}
-                    >
-                        <ChevronLeftIcon className="h-8 text-[rgb(13,22,53)]" />
-                    </button>
-                    <button
-                        className={
-                            'absolute right-[4px] lg:right-[-4px] z-10 h-12 w-12 lg:h-14 lg:w-14 rounded-full bg-white flex items-center justify-center transition ' +
-                            'hover:bg-neutral-200 active:bg-neutral-300'
-                        }
-                        onClick={() => setIndex(index + 1)}
-                    >
-                        <ChevronRightIcon className="h-8 text-[rgb(13,22,53)]" />
-                    </button>
-                </div>
-                <div
-                    className="whitespace-nowrap w-full transition duration-700 ease-out relative h-[600px] sm:h-[500px] lg:h-[400px]"
-                    style={
-                        {
-                            // transform: `translateX(calc(${0 - index * 100}%))`,
-                        }
-                    }
-                >
-                    <div className="h-full w-full" />
-                    {blocks.map((block, i) => {
-                        const adjIndex = getIndex(i - index, blocks.length)
-
-                        return (
-                            <div
-                                key={i}
-                                className={clsx('inline-block w-full px-6 absolute top-0 h-full', {
-                                    'opacity-20': adjIndex !== ADJACENT_ITEMS,
-                                    'transition-all duration-700':
-                                        (adjIndex > 0 && adjIndex < ADJACENT_ITEMS * 2) ||
-                                        (direction === 'left' && adjIndex === ADJACENT_ITEMS * 2) ||
-                                        (direction === 'right' && adjIndex === 0),
-                                })}
-                                style={{
-                                    transform: `translateX(calc(${
-                                        (adjIndex - ADJACENT_ITEMS) * 100
-                                    }%))`,
-                                }}
-                            >
-                                <div className="bg-[rgba(14,22,53,.4)] flex flex-col items-center backdrop-blur-md border border-white border-opacity-10 h-full transition duration-700 relative px-10 py-12 lg:px-12 lg:py-16">
-                                    <div
-                                        className={clsx(
-                                            'absolute top-[-36px] bg-[#f3883c] h-16 w-16 rounded-full flex items-center justify-center text-[80px] transition duration-700',
-                                            {
-                                                'opacity-0': adjIndex !== ADJACENT_ITEMS,
-                                            },
-                                        )}
-                                    >
-                                        <span className="mt-10">“</span>
+            <Carousel
+                // eslint-disable-next-line react/display-name
+                items={blocks.map((block, i) => (
+                    <Fragment key={i}>
+                        <>
+                            <p className="text-left max-w-full whitespace-normal flex-1 overflow-y-auto">
+                                {block.testimonial}
+                            </p>
+                            <div className="mt-auto flex lg:flex-row flex-col w-full gap-x-6 lg:items-center lg:pt-0 pt-12">
+                                <div className="h-16 min-w-[64px] rounded-full relative overflow-hidden">
+                                    <Image
+                                        src={block.icon}
+                                        alt={block.person}
+                                        width={64}
+                                        style={{
+                                            objectFit: 'cover',
+                                            filter: 'grayscale()',
+                                            borderRadius: 32,
+                                        }}
+                                    />
+                                </div>
+                                <div className="w-full whitespace-normal">
+                                    <div className="text-lg font-bold lg:pt-0 lg:pb-0 pt-4 pb-1">
+                                        {block.person}
                                     </div>
-                                    <p className="text-left max-w-full whitespace-normal flex-1 overflow-y-auto">
-                                        {block.testimonial}
-                                    </p>
-                                    <div className="mt-auto flex lg:flex-row flex-col w-full gap-x-6 lg:items-center lg:pt-0 pt-12">
-                                        <div className="h-16 min-w-[64px] rounded-full relative overflow-hidden">
-                                            <Image
-                                                src={block.icon}
-                                                alt={block.person}
-                                                width={64}
-                                                style={{
-                                                    objectFit: 'cover',
-                                                    filter: 'grayscale()',
-                                                    borderRadius: 32,
-                                                }}
-                                            />
-                                        </div>
-                                        <div className="w-full whitespace-normal">
-                                            <div className="text-lg font-bold lg:pt-0 lg:pb-0 pt-4 pb-1">
-                                                {block.person}
-                                            </div>
-                                            <div className="font-light text-white text-opacity-50">
-                                                {block.title}
-                                            </div>
-                                        </div>
+                                    <div className="font-light text-white text-opacity-50">
+                                        {block.title}
                                     </div>
                                 </div>
                             </div>
-                        )
-                    })}
-                </div>
-            </div>
+                        </>
+                    </Fragment>
+                ))}
+            />
         </section>
     )
 }

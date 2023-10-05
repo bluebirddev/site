@@ -52,7 +52,7 @@ const blocks = [
 
 export function OurPeople() {
     return (
-        <div
+        <section
             className="container w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-44"
             id="people"
         >
@@ -62,11 +62,8 @@ export function OurPeople() {
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-5">
                 {blocks.map((block) => (
-                    <div
-                        key={block.person}
-                        className="min-h-[620px] backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 fade fade-up"
-                    >
-                        <div className="h-[300px] md:h-[250px] relative">
+                    <div key={block.person} className="card fade fade-up flex flex-col">
+                        <div className="h-72 md:h-64 relative">
                             <Image
                                 src={block.image}
                                 alt={block.person}
@@ -77,45 +74,48 @@ export function OurPeople() {
                                     height: '100%',
                                 }}
                             />
+                            <div className="absolute bottom-0 right-0 m-4 px-5 py-3 bg-secondary text-white text-base shadow">
+                                {block.title}
+                            </div>
                         </div>
-                        <div className="px-6 pt-5 pb-6">
+                        <div className="px-6 pt-5 pb-6 flex-1 flex flex-col">
                             <h4 className="text-xl font-bold">{block.person}</h4>
-                            <p className="pt-4">{block.description}</p>
-                        </div>
-                        <div className="px-6 flex space-x-5 pb-8">
-                            <a href={block.linkedin} target="_blank">
-                                <Image
-                                    src={linkedin}
-                                    alt={block.person}
-                                    style={{
-                                        objectFit: 'cover',
-                                    }}
-                                />
-                            </a>
-                            <a href={block.fb} target="_blank">
-                                <Image
-                                    src={fb}
-                                    alt={block.person}
-                                    style={{
-                                        objectFit: 'cover',
-                                    }}
-                                />
-                            </a>
-                            {block.insta && (
-                                <a href={block.insta} target="_blank">
+                            <p className="flex pt-4">{block.description}</p>
+                            <div className="flex space-x-5 pt-6">
+                                <a href={block.linkedin} target="_blank">
                                     <Image
-                                        src={insta}
+                                        src={linkedin}
                                         alt={block.person}
                                         style={{
                                             objectFit: 'cover',
                                         }}
                                     />
                                 </a>
-                            )}
+                                <a href={block.fb} target="_blank">
+                                    <Image
+                                        src={fb}
+                                        alt={block.person}
+                                        style={{
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+                                </a>
+                                {block.insta && (
+                                    <a href={block.insta} target="_blank">
+                                        <Image
+                                            src={insta}
+                                            alt={block.person}
+                                            style={{
+                                                objectFit: 'cover',
+                                            }}
+                                        />
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }

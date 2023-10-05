@@ -9,6 +9,7 @@ import hamburger from '@/images/hamburger.svg'
 
 import { HEADER_HEIGHT } from './Header'
 import { sections } from './header_sections'
+import Link from 'next/link'
 
 export function MobileHeader() {
     const [isOpen, setOpen] = useState(false)
@@ -37,7 +38,7 @@ export function MobileHeader() {
                         {sections.map((section) => (
                             <li key={section.id}>
                                 <a
-                                    href={`#${section.id}`}
+                                    href={`/#${section.id}`}
                                     onClick={() => setOpen(false)}
                                     className="py-5 block btn-tertiary"
                                 >
@@ -46,7 +47,11 @@ export function MobileHeader() {
                             </li>
                         ))}
                         <li>
-                            <a className="btn-secondary py-5 block" onClick={() => setOpen(false)}>
+                            <Link
+                                href="/quote-calculator"
+                                className="btn-secondary py-5 block"
+                                onClick={() => setOpen(false)}
+                            >
                                 Quote Calculator
                                 <Image
                                     src={calculator}
@@ -54,11 +59,11 @@ export function MobileHeader() {
                                     width={20}
                                     alt="Picture of the author"
                                 />
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <a
-                                href="#contact-us"
+                                href="/#contact-us"
                                 className="btn-primary py-5 block"
                                 onClick={() => setOpen(false)}
                             >

@@ -13,21 +13,33 @@ import pab from '@/images/clients/pab.svg'
 import pepsi from '@/images/clients/pepsi.svg'
 import revix from '@/images/clients/revix.svg'
 import thorchain from '@/images/clients/thorchain.svg'
+import arcx from '@/images/clients/arcx.png'
+import tweak from '@/images/clients/tweak.svg'
+import raubex from '@/images/clients/raubex.png'
+import oystar from '@/images/clients/oystar.png'
+import polygon from '@/images/clients/polygon.png'
+import revio from '@/images/clients/revio.svg'
+import { Hero } from '@/components/hero'
 
 export function Intro() {
     return (
         <>
-            <section className="fade fade-left container" id="intro">
-                <div className="space-y-8 pt-32 lg:pt-48 items-center justify-center flex flex-col ">
-                    <h3 className="pill-heading">Bespoke. Excellent. Enduring.</h3>
-                    <h1>
+            <Hero
+                id="intro"
+                subtitle="Bespoke. Excellent. Enduring."
+                title={
+                    <>
                         Building <em>Innovative Software</em> with Style and Simplicity
-                    </h1>
-                    <p className="max-w-lg text-center">
+                    </>
+                }
+                description={
+                    <>
                         Bluebird Development provides exclusive consulting, development, and design
                         resources for you and your team.
-                    </p>
-                    <div className="gap-x-5 gap-y-3 flex flex-col lg:flex-row w-full lg:w-auto">
+                    </>
+                }
+                buttons={
+                    <>
                         <button className="btn-primary">
                             <span>Quote Calculator</span>
                             <Image
@@ -40,11 +52,11 @@ export function Intro() {
                         <a className="btn-secondary" href="#what-we-do">
                             What We Do
                         </a>
-                    </div>
-                </div>
-            </section>
+                    </>
+                }
+            />
 
-            <section className="max-w-full w-full text-center pt-32 lg:pt-40">
+            <section className="max-w-full w-full text-center">
                 <h3 className="text-xl fade fade-left">Our Client Lineup</h3>
                 <div className="pt-10 fade fade-up space-x-3 [&_a]:block [&_a]:px-3 [&_a]:mx-3">
                     <Marquee>
@@ -77,6 +89,24 @@ export function Intro() {
                         </a>
                         <a href="https://thorchain.com" target="_blank">
                             <Image src={thorchain} height={31} alt="Thorchain" />
+                        </a>
+                        <a href="https://www.arcxanalytics.com/" target="_blank">
+                            <Image src={arcx} height={32} alt="arcx" />
+                        </a>
+                        <a href="https://www.tweakcarbon.com/" target="_blank" className="mb-[2px]">
+                            <Image src={tweak} height={32} alt="tweak" />
+                        </a>
+                        <a href="https://www.raubex.com/" target="_blank" className="mb-[1px]">
+                            <Image src={raubex} height={44} alt="Raubex" />
+                        </a>
+                        <a href="https://oystar-africa.com/" target="_blank">
+                            <Image src={oystar} height={36} alt="Oystar" />
+                        </a>
+                        <a href="https://www.polygonprop.com/" target="_blank">
+                            <Image height={38} src={polygon} alt="PolygonProp" />
+                        </a>
+                        <a href="https://www.reviopay.com/" target="_blank" className="mt-[3px]">
+                            <Image src={revio} height={34} alt="Revio" />
                         </a>
                     </Marquee>
                 </div>

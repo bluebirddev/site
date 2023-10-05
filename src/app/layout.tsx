@@ -6,6 +6,8 @@ import Image from 'next/image'
 import Script from 'next/script'
 
 import bg from '@/images/bg.jpeg'
+import { Header } from './Header'
+import { Footer } from './_sections/Footer'
 
 const bodyFont = Montserrat({
     subsets: ['latin'],
@@ -26,6 +28,7 @@ const description =
 const title = 'Bluebird - Home'
 
 export const metadata: Metadata = {
+    metadataBase: process.env.NODE_ENV === 'production' ? null : new URL('http://localhost:3000'),
     title,
     description,
     viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
@@ -79,11 +82,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         }}
                     ></div>
                 </div>
-                {children}
+                <Header />
+
+                <main className="flex flex-col items-center w-full">
+                    {children}
+                    <Footer />
+                </main>
             </body>
 
             {/* Fade script */}
-            <Script src="./fade-script.js" />
+            <Script src={`/fade-script.js`} />
         </html>
     )
 }

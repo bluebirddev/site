@@ -3,8 +3,8 @@ import howWeStarted from '@/images/how-we-started.jpg'
 
 export function HowItStarted() {
     return (
-        <div className="mt-24 lg:mt-48 container backdrop-blur-md bg-[rgba(14,22,53,.4)] border border-white border-opacity-10 p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
-            <div className="lg:flex-1 h-[250px] lg:h-auto relative fade fade-left">
+        <section className="mt-24 lg:mt-48 container card p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
+            <div className="lg:flex-1 h-64 lg:h-auto relative fade fade-left">
                 <Image
                     src={howWeStarted}
                     alt="how-we-started"
@@ -19,14 +19,14 @@ export function HowItStarted() {
                 <h3 className="pill-heading fade fade-right">Our Company</h3>
                 <h2 className=" pt-8 fade fade-right">How it all started</h2>
                 <div className="pt-4">
-                    <p className="text-left text-white font-normal fade fade-right">
+                    <p className="text-white font-normal fade fade-right">
                         At Bluebird Technologies, we are on a simple mission: to build timeless,
                         boutique software that endures beyond us. We work across industry,
                         partnering with corporates and founders alike.
                         <br />
                         <br />
                     </p>
-                    <p className="text-left fade fade-right">
+                    <p className="fade fade-right">
                         In 2018, the Bluebird brand took flight with our three founding members and
                         a boatload of ambition. Today, our company is made up of a multi-national
                         team working asynchronously from several global cities, and across
@@ -59,6 +59,6 @@ export function HowItStarted() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

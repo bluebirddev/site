@@ -1,8 +1,6 @@
-'use client'
-import { FormEvent, useState } from 'react'
 import Image from 'next/image'
-
-import contact from '@/images/contact.jpg'
+import contact from '@/images/contact-calculator.jpg'
+import { FormEvent, useState } from 'react'
 import check from '@/images/check.svg'
 
 export function ContactUs() {
@@ -12,12 +10,12 @@ export function ContactUs() {
         event.preventDefault()
         setIsSuccess(true)
     }
+
     return (
         <section id="contact-us" className="pt-24 lg:pt-32 container">
             <div className="card flex flex-col-reverse lg:flex-row items-stretch">
                 <div className="lg:w-3/5 flex flex-col items-start p-6 lg:p-14">
-                    <h3 className="pill-heading fade fade-left">Contact Us</h3>
-                    <h2 className="pt-5 fade fade-left pb-8">Get in touch today</h2>
+                    <h3 className="pill-heading fade fade-left mb-8">Quote Calculator Form</h3>
                     {!isSuccess ? (
                         <form
                             className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-8 w-full fade fade-left"
@@ -27,15 +25,8 @@ export function ContactUs() {
                             <input placeholder="Email Address" />
                             <input placeholder="+1 932 123 123" />
                             <input placeholder="Company (Optional)" />
-                            <textarea
-                                placeholder="Type your message here"
-                                rows={3}
-                                className="col-span-2"
-                            />
                             <div className="pt-4">
-                                <button className="btn-primary" type="submit">
-                                    Get in Touch
-                                </button>
+                                <button className="btn-primary">Let’s send you a quote</button>
                             </div>
                         </form>
                     ) : (

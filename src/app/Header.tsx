@@ -5,6 +5,7 @@ import calculator from '@/images/calculator.svg'
 
 import { MobileHeader } from './MobileHeader'
 import { sections } from './header_sections'
+import Link from 'next/link'
 
 export const HEADER_HEIGHT = 96
 
@@ -18,14 +19,14 @@ export function Header() {
                     height: HEADER_HEIGHT,
                 }}
             >
-                <a className="hover:scale-90 transition" href="#intro">
+                <Link className="hover:scale-90 transition" href="/">
                     <Image src={logo} width={168} alt="Picture of the author" />
-                </a>
+                </Link>
                 <ol className="hidden lg:flex">
                     {sections.map((section) => (
                         <li key={section.id}>
                             <a
-                                href={`#${section.id}`}
+                                href={`/#${section.id}`}
                                 className="text-white text-opacity-60 font-medium p-4 cursor-pointer hover:text-opacity-100 transition"
                             >
                                 {section.label}
@@ -34,7 +35,7 @@ export function Header() {
                     ))}
                 </ol>
                 <div className="hidden lg:flex items-center space-x-4">
-                    <button className="btn-tertiary">
+                    <Link className="btn-tertiary" href="/quote-calculator">
                         <span>Quote Calculator</span>
                         <Image
                             src={calculator}
@@ -42,8 +43,8 @@ export function Header() {
                             width={20}
                             alt="Picture of the author"
                         />
-                    </button>
-                    <a className="btn-primary" href="#contact-us">
+                    </Link>
+                    <a className="btn-primary" href="/#contact-us">
                         Contact us
                     </a>
                 </div>

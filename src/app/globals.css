@@ -89,7 +89,10 @@ h1 {
     @apply text-4xl leading-[45px] lg:text-5xl text-center font-bold max-w-3xl;
 }
 h2 {
-    @apply text-[35px] leading-[40px] lg:text-[42px] lg:leading-[48px] font-bold tracking-[0.5px];
+    @apply text-[35px] leading-[40px] lg:text-[42px] lg:leading-[48px] font-bold;
+}
+h3 {
+    @apply text-2xl lg:text-3xl font-bold;
 }
 
 p {
