@@ -20,6 +20,7 @@ import oystar from '@/images/clients/oystar.png'
 import polygon from '@/images/clients/polygon.png'
 import revio from '@/images/clients/revio.svg'
 import { Hero } from '@/components/hero'
+import Link from 'next/link'
 
 export function Intro() {
     return (
@@ -40,7 +41,7 @@ export function Intro() {
                 }
                 buttons={
                     <>
-                        <button className="btn-primary">
+                        <Link className="btn-primary" href="/quote-calculator">
                             <span>Quote Calculator</span>
                             <Image
                                 src={calculator}
@@ -48,7 +49,7 @@ export function Intro() {
                                 width={20}
                                 alt="Picture of the author"
                             />
-                        </button>
+                        </Link>
                         <a className="btn-secondary" href="#what-we-do">
                             What We Do
                         </a>

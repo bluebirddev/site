@@ -7,6 +7,7 @@ import Link from 'next/link'
 export default function QuoteCalculatorPage({ children }: { children: React.ReactNode }) {
     return (
         <>
+            {children}
             <Hero
                 subtitle="Quote Calculator"
                 title={
@@ -38,7 +39,6 @@ export default function QuoteCalculatorPage({ children }: { children: React.Reac
                     </>
                 }
             />
-            {children}
         </>
     )
 }

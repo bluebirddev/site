@@ -37,13 +37,13 @@ export function MobileHeader() {
                     <ul className="text-white text-center space-y-3">
                         {sections.map((section) => (
                             <li key={section.id}>
-                                <a
+                                <Link
                                     href={`/#${section.id}`}
                                     onClick={() => setOpen(false)}
                                     className="py-5 block btn-tertiary"
                                 >
                                     {section.label}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                         <li>
@@ -62,13 +62,13 @@ export function MobileHeader() {
                             </Link>
                         </li>
                         <li>
-                            <a
+                            <Link
                                 href="/#contact-us"
                                 className="btn-primary py-5 block"
                                 onClick={() => setOpen(false)}
                             >
                                 Contact us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

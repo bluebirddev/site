@@ -25,12 +25,12 @@ export function Header() {
                 <ol className="hidden lg:flex">
                     {sections.map((section) => (
                         <li key={section.id}>
-                            <a
+                            <Link
                                 href={`/#${section.id}`}
                                 className="text-white text-opacity-60 font-medium p-4 cursor-pointer hover:text-opacity-100 transition"
                             >
                                 {section.label}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ol>
@@ -44,9 +44,9 @@ export function Header() {
                             alt="Picture of the author"
                         />
                     </Link>
-                    <a className="btn-primary" href="/#contact-us">
+                    <Link className="btn-primary" href="/#contact-us">
                         Contact us
-                    </a>
+                    </Link>
                 </div>
             </header>
             <MobileHeader />

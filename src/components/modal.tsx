@@ -32,7 +32,7 @@ export function Modal({
          */
         setIsOpen(false)
         setTimeout(() => {
-            router.push(closeLink)
+            router.push(closeLink, { scroll: false })
         }, DURATION)
     }
 
@@ -50,7 +50,7 @@ export function Modal({
                 },
             )}
         >
-            <div className="bg-white bg-opacity-20 backdrop-blur-md max-w-[90%] w-full lg:max-w-screen-md p-5">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md mx-3 md:max-w-[90%] w-full lg:max-w-screen-md px-3 py-5 md:p-5">
                 <div className="flex items-center justify-between">
                     <h2 className="text-white">{title}</h2>
                     <button onClick={onClose}>
