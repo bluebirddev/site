@@ -12,20 +12,23 @@ import revio from '@/images/case-studies/revio.webp'
 import revioLogo from '@/images/case-studies/revio-logo.svg'
 import clsx from 'clsx'
 
-const CASE_STUDIES = [
+export const CASE_STUDIES = [
     {
+        id: 'aurora',
         image: aurora,
         logo: auroraLogo,
         title: 'Aurora',
         description: 'Radically reduce failed payments and churn',
     },
     {
+        id: 'raubex',
         image: raubex,
         logo: raubexLogo,
         title: 'Raubex',
         description: 'Radically reduce failed payments and churn',
     },
     {
+        id: 'revio',
         image: revio,
         logo: revioLogo,
         title: 'Revio',
