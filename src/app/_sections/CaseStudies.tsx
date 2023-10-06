@@ -11,6 +11,7 @@ import raubexLogo from '@/images/case-studies/raubex-logo.png'
 import revio from '@/images/case-studies/revio.webp'
 import revioLogo from '@/images/case-studies/revio-logo.svg'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 export const CASE_STUDIES = [
     {
@@ -68,10 +69,14 @@ export function CaseStudies() {
                                 <strong className="font-medium">{caseStudy.title}</strong> -{' '}
                                 {caseStudy.description}
                             </p>
-                            <button className="btn-secondary mt-auto">
+
+                            <Link
+                                className="btn-secondary mt-auto"
+                                href={`/case-studies/${caseStudy.id}`}
+                            >
                                 <span>View Case Study</span>
                                 <Image src={buttonArrow} height={20} width={20} alt="button" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
