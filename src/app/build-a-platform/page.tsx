@@ -48,6 +48,7 @@ import location_gps from '@/images/calculator/location_gps.svg'
 import location_maps from '@/images/calculator/location_maps.svg'
 import { getUserCurrency } from '@/utils'
 import { ContactUs } from './_content/ContactUs'
+import Script from 'next/script'
 
 const sections: {
     id: string
@@ -459,7 +460,8 @@ export default function BuildAPlatformPage() {
                     ))}
                 </div>
             </div>
-            <ContactUs />
+            <Script src="https://web3forms.com/client/script.js" />
+            <ContactUs quote={JSON.stringify({ answers, price })} />
         </>
     )
 }

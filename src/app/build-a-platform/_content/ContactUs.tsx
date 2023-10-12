@@ -3,11 +3,20 @@ import contact from '@/images/contact-calculator.jpg'
 import { FormEvent, useState } from 'react'
 import check from '@/images/check.svg'
 
-export function ContactUs() {
+export function ContactUs({ quote }: { quote: string }) {
     const [isSuccess, setIsSuccess] = useState(false)
 
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
+        const formData = new FormData(event.target as HTMLFormElement)
+        console.log({ formData })
+
+        await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })
+
+        setIsSuccess(true)
         setIsSuccess(true)
     }
 
@@ -21,10 +30,23 @@ export function ContactUs() {
                             className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-8 w-full fade fade-left"
                             onSubmit={onSubmit}
                         >
-                            <input placeholder="Full name" />
-                            <input placeholder="Email Address" />
-                            <input placeholder="+1 932 123 123" />
-                            <input placeholder="Company (Optional)" />
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="1c52aea3-2a93-4f7a-ae34-3722c6ffdff1"
+                            ></input>
+                            <input placeholder="Full name" name="full_name" type="text" required />
+                            <input placeholder="Email Address" name="email" type="email" required />
+                            <input placeholder="+1 932 123 123" name="phone" type="tel" required />
+                            <input placeholder="Company (Optional)" name="company" type="text" />
+                            <input
+                                name="quote"
+                                type="text"
+                                required
+                                readOnly
+                                value={quote}
+                                className="hidden"
+                            />
                             <div className="pt-4">
                                 <button className="btn-primary">Let’s send you a quote</button>
                             </div>

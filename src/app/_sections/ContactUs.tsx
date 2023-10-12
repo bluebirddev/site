@@ -12,11 +12,6 @@ export function ContactUs() {
         event.preventDefault()
 
         const formData = new FormData(event.target as HTMLFormElement)
-        const formProps = Object.fromEntries(formData)
-
-        if (!formProps['h-captcha-response']) {
-            return
-        }
 
         await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -45,21 +40,14 @@ export function ContactUs() {
                             <input placeholder="Email Address" name="email" type="email" required />
                             <input placeholder="+1 932 123 123" name="phone" type="tel" required />
                             <input placeholder="Company (Optional)" name="company" type="text" />
-                            <div className="col-span-full flex flex-col lg:flex-row gap-4 lg:gap-8">
-                                <textarea
-                                    placeholder="Type your message here"
-                                    rows={3}
-                                    className="flex-1"
-                                    name="message"
-                                    required
-                                />
-                                <div
-                                    className="h-captcha"
-                                    data-captcha="true"
-                                    data-size="compact"
-                                ></div>
-                            </div>
-                            <div className="">
+                            <textarea
+                                placeholder="Type your message here"
+                                rows={3}
+                                className="col-span-2"
+                                name="message"
+                                required
+                            />
+                            <div className="pt-4">
                                 <button className="btn-primary" type="submit">
                                     Get in Touch
                                 </button>

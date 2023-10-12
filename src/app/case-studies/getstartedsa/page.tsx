@@ -71,7 +71,8 @@ const caseStudy: CaseStudy = {
         howWeUncoveredThisInformation: [
             <>
                 We implemented a three step credit check consiting of a warm body check, ID number
-                credit check, and a profability check by means of statement upload through.
+                credit check, and a profability check by means of statement upload through means of
+                statement upload and parsing thereof.
             </>,
             <>
                 We analysed and improved existing client wireframes & designs, and translated them
