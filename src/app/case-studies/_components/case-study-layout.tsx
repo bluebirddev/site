@@ -71,7 +71,7 @@ export function CaseStudyLayout({
                         ))}
                     </ul>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 flex items-center">
                     <Image src={intro.image} alt="main" />
                 </div>
             </section>

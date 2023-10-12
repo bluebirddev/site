@@ -1,9 +1,9 @@
-import main from '@/images/case-studies/getstartedza/main.svg'
-import challenge from '@/images/case-studies/getstartedza/challenge.svg'
-import approach from '@/images/case-studies/getstartedza/approach.svg'
-import mockup from '@/images/case-studies/getstartedza/mockup.svg'
-import designProcess from '@/images/case-studies/getstartedza/design_process.svg'
-import buildProcess from '@/images/case-studies/getstartedza/build_process.svg'
+import main from '@/images/case-studies/getstartedza/main.png'
+import challenge from '@/images/case-studies/getstartedza/challenge.png'
+import approach from '@/images/case-studies/getstartedza/approach.png'
+import mockup from '@/images/case-studies/getstartedza/mockup.png'
+import designProcess from '@/images/case-studies/getstartedza/design_process.png'
+import buildProcess from '@/images/case-studies/getstartedza/build_process.png'
 
 import { CaseStudy, CaseStudyLayout } from '../_components/case-study-layout'
 
