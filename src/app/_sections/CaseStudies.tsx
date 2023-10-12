@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import clsx from 'clsx'
+import Link from 'next/link'
 
 import buttonArrow from '@/images/button_arrow.svg'
 
@@ -8,10 +10,8 @@ import auroraLogo from '@/images/case-studies/aurora-logo.svg'
 import raubex from '@/images/case-studies/raubex.png'
 import raubexLogo from '@/images/case-studies/raubex-logo.png'
 
-import revio from '@/images/case-studies/revio.webp'
-import revioLogo from '@/images/case-studies/revio-logo.svg'
-import clsx from 'clsx'
-import Link from 'next/link'
+import getstarted from '@/images/case-studies/getstarted.png'
+import getstartedLogo from '@/images/case-studies/getstarted-logo.svg'
 
 export const CASE_STUDIES = [
     {
@@ -29,11 +29,11 @@ export const CASE_STUDIES = [
         description: 'Radically reduce failed payments and churn',
     },
     {
-        id: 'revio',
-        image: revio,
-        logo: revioLogo,
-        title: 'Revio',
-        description: 'Radically reduce failed payments and churn',
+        id: 'getstartedsa',
+        image: getstarted,
+        logo: getstartedLogo,
+        title: 'GetStarted',
+        description: 'Zero interest micro loan payment platform',
     },
 ]
 
