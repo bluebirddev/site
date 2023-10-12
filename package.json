@@ -34,8 +34,8 @@
         "eslint-plugin-prettier": "latest",
         "postcss": "latest",
         "prettier": "latest",
+        "sass": "latest",
         "tailwindcss": "latest",
-        "typescript": "latest",
-        "sass": "latest"
+        "typescript": "latest"
     }
 }

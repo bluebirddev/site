@@ -10,6 +10,19 @@ export function ContactUs() {
 
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
+
+        const formData = new FormData(event.target as HTMLFormElement)
+        const formProps = Object.fromEntries(formData)
+
+        if (!formProps['h-captcha-response']) {
+            return
+        }
+
+        await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })
+
         setIsSuccess(true)
     }
     return (
@@ -23,16 +36,30 @@ export function ContactUs() {
                             className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-8 w-full fade fade-left"
                             onSubmit={onSubmit}
                         >
-                            <input placeholder="Full name" />
-                            <input placeholder="Email Address" />
-                            <input placeholder="+1 932 123 123" />
-                            <input placeholder="Company (Optional)" />
-                            <textarea
-                                placeholder="Type your message here"
-                                rows={3}
-                                className="col-span-2"
-                            />
-                            <div className="pt-4">
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="1c52aea3-2a93-4f7a-ae34-3722c6ffdff1"
+                            ></input>
+                            <input placeholder="Full name" name="full_name" type="text" required />
+                            <input placeholder="Email Address" name="email" type="email" required />
+                            <input placeholder="+1 932 123 123" name="phone" type="tel" required />
+                            <input placeholder="Company (Optional)" name="company" type="text" />
+                            <div className="col-span-full flex flex-col lg:flex-row gap-4 lg:gap-8">
+                                <textarea
+                                    placeholder="Type your message here"
+                                    rows={3}
+                                    className="flex-1"
+                                    name="message"
+                                    required
+                                />
+                                <div
+                                    className="h-captcha"
+                                    data-captcha="true"
+                                    data-size="compact"
+                                ></div>
+                            </div>
+                            <div className="">
                                 <button className="btn-primary" type="submit">
                                     Get in Touch
                                 </button>
