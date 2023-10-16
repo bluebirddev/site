@@ -94,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Script src={`/fade-script.js`} />
 
             {/* Google Analytics */}
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-TGB645J9J0" />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TGB645J9J0" />
             <Script id="google-analytics">
                 {`
                     window.dataLayer = window.dataLayer || [];
