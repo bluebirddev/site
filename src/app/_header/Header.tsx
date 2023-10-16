@@ -27,7 +27,7 @@ export function Header() {
                         <li key={section.id}>
                             <Link
                                 href={`/#${section.id}`}
-                                className="text-white text-opacity-60 font-medium p-4 cursor-pointer hover:text-opacity-100 transition"
+                                className="text-white text-center text-opacity-60 font-medium p-4 cursor-pointer hover:text-opacity-100 transition"
                             >
                                 {section.label}
                             </Link>

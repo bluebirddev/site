@@ -46,11 +46,10 @@ export function Footer() {
                             <Image src={location} alt="location" />
                             <div>
                                 <div className="text-opacity-60 text-white mb-1">
-                                    Address - South Africa
+                                    Address - U.S.A.
                                 </div>
                                 <div>
-                                    Cedarwood House, Ballywoods Office Park, 33 Ballyclare Drive,
-                                    Bryanston Johannesburb, 2191
+                                    1899, 701 Tillery Street Unit 12, Austin, TX, Travis, US, 78702
                                 </div>
                             </div>
                         </li>
@@ -60,10 +59,16 @@ export function Footer() {
                                 <div className="text-opacity-60 text-white mb-1">
                                     Address - South Africa
                                 </div>
-                                <div>
-                                    Cedarwood House, Ballywoods Office Park, 33 Ballyclare Drive,
-                                    Bryanston Johannesburb, 2191
+                                <div>33 Ballyclare Drive, Bryanston, Johannesburg, 2191</div>
+                            </div>
+                        </li>
+                        <li className="flex border border-white border-opacity-10 px-5 py-4 space-x-4">
+                            <Image src={location} alt="location" />
+                            <div>
+                                <div className="text-opacity-60 text-white mb-1">
+                                    Address - Georgia
                                 </div>
+                                <div>16 Ateni Street, Tbilisi, Tbilisi, GE, 0179</div>
                             </div>
                         </li>
                     </ol>
