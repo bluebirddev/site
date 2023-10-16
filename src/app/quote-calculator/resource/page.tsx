@@ -1,3 +1,5 @@
+'use client'
+
 import { Modal } from '@/components/modal'
 import { getUserCurrency } from '@/utils'
 
