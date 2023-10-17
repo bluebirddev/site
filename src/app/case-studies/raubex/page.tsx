@@ -104,12 +104,11 @@ const caseStudy: CaseStudy = {
     achieved: {
         heading: 'What we built is the main system actively used at the company today',
         list: [
-            <>Multiple roles and permission based system</>,
-            <>Able to create, edit and delete requisitions</>,
-            <>Able to create, edit and delete orders</>,
-            <>Able to create deliveries and call-offs</>,
-            <>Able to export orders and deliveries to external accounting system.</>,
-            <>Able to produce PDF quotes, orders and delivery notes.</>,
+            <>A fully fledged user management and permission based system</>,
+            <>Ability to create, edit, and delete orders and requisitions</>,
+            <>Procedures to action deliveries and call-offs</>,
+            <>Functionality to export orders and deliveries to external accounting system.</>,
+            <>Ability to produce PDF quotes, orders and delivery notes.</>,
         ],
     },
 }

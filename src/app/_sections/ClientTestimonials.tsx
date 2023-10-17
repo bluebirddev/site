@@ -21,7 +21,7 @@ const blocks = [
         title: 'Group CEO, Ambermacs PTY LTD',
         icon: philip,
         testimonial:
-            "We've used Bluebird for three of our company websites and have been impressed with the speed and quality of work. They built a website for our macadamia factory in White River, a community portal for our growers, and finally most recently has produced an excellent website for our newly launched macadamia milk. All three websites were understood by Bluebird intuitively and executed professionally and in a timely manner. I would definitely recommend them!",
+            "We've used Bluebird on multiple occasions and have been impressed with the speed and quality of work. All three websites and community portals were understood by Bluebird intuitively, executed professionally, and in a timely manner. I would definitely recommend them !",
     },
     {
         person: 'Danielle Laity',
@@ -56,14 +56,13 @@ export function ClientTestimonials() {
                 </h2>
             </div>
             <Carousel
-                // eslint-disable-next-line react/display-name
                 items={blocks.map((block, i) => (
                     <Fragment key={i}>
                         <>
                             <p className="text-left max-w-full whitespace-normal flex-1 overflow-y-auto">
                                 {block.testimonial}
                             </p>
-                            <div className="mt-auto flex lg:flex-row flex-col w-full gap-x-6 lg:items-center lg:pt-0 pt-12">
+                            <div className="mt-auto flex lg:flex-row flex-col w-full gap-x-6 lg:items-center lg:pt-0 pt-8">
                                 <div className="h-16 min-w-[64px] rounded-full relative overflow-hidden">
                                     <Image
                                         src={block.icon}
