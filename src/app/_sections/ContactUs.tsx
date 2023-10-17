@@ -23,7 +23,7 @@ export function ContactUs() {
     return (
         <section id="contact-us" className="pt-24 lg:pt-32 container">
             <div className="card flex flex-col-reverse lg:flex-row items-stretch">
-                <div className="lg:w-3/5 flex flex-col items-start p-6 lg:p-14">
+                <div className="lg:w-3/5 flex flex-col items-start p-5 lg:p-14">
                     <h3 className="pill-heading fade fade-left">Contact Us</h3>
                     <h2 className="pt-5 fade fade-left pb-8">Get in touch today</h2>
                     {!isSuccess ? (

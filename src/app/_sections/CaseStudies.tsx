@@ -63,7 +63,7 @@ export function CaseStudies() {
                         key={caseStudy.title}
                     >
                         <Image src={caseStudy.image} alt={caseStudy.title} />
-                        <div className="p-8 card flex flex-col items-start">
+                        <div className="px-5 py-6 md:p-8 card flex flex-col items-start">
                             <Image src={caseStudy.logo} alt={caseStudy.title} width={100} />
                             <p className="pt-4 pb-8 text-lg text-left">
                                 <strong className="font-medium">{caseStudy.title}</strong> -{' '}

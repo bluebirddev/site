@@ -23,7 +23,7 @@ export function ContactUs({ quote }: { quote: string }) {
     return (
         <section id="contact-us" className="pt-24 lg:pt-32 container">
             <div className="card flex flex-col-reverse lg:flex-row items-stretch">
-                <div className="lg:w-3/5 flex flex-col items-start p-6 lg:p-14">
+                <div className="lg:w-3/5 flex flex-col items-start p-5 lg:p-14">
                     <h3 className="pill-heading fade fade-left mb-8">Quote Calculator Form</h3>
                     {!isSuccess ? (
                         <form

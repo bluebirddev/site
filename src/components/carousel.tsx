@@ -62,7 +62,7 @@ export function Carousel({ items }: { items: ReactNode[] }) {
                                 }%))`,
                             }}
                         >
-                            <div className="card flex flex-col items-center h-full transition duration-700 relative px-10 py-12 lg:px-12 lg:py-16">
+                            <div className="card flex flex-col items-center h-full transition duration-700 relative px-8 py-12 lg:px-12 lg:py-16">
                                 <div
                                     className={clsx(
                                         'absolute top-[-36px] bg-secondary h-16 w-16 rounded-full flex items-center justify-center text-[80px] transition duration-700',
