@@ -40,7 +40,7 @@ export function Carousel({ items }: { items: ReactNode[] }) {
                     <ChevronRightIcon className="h-8 text-primary" />
                 </button>
             </div>
-            <div className="whitespace-nowrap w-full transition duration-700 ease-out relative h-[554px] sm:h-[440px] lg:h-[330px]">
+            <div className="whitespace-nowrap w-full transition duration-700 ease-out relative h-[554px] sm:h-[400px] lg:h-[330px]">
                 {items.map((item, itemIndex) => {
                     const adjustedItemIndex = getIndex(itemIndex - index, items.length)
 
