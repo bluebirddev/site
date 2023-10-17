@@ -101,7 +101,7 @@ const row4 = [
 
 export function OurTechStack() {
     return (
-        <section className="card mt-12 lg:mt-48 container flex flex-col-reverse lg:flex-row gap-14 p-8 lg:px-14 lg:py-20">
+        <section className="card mt-12 lg:mt-48 container flex flex-col-reverse lg:flex-row gap-14 p-8 lg:px-14 lg:py-20 mb-4">
             <div className="space-y-5 lg:flex-1 min-w-0 fade fade-left">
                 {[row1, row2, row3, row4].map((rows, rowIndex) => (
                     <Marquee key={rowIndex} direction={rowIndex % 2 === 0 ? 'left' : 'right'}>

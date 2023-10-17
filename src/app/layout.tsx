@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         // Injects the variables in the <html> tag, so that they can be used in CSS, as in `var(--body)`
         <html lang="en" className={`${bodyFont.variable} ${headingFont.variable}`}>
-            <body className="relative bg-primary flex justify-center">
+            <body className="relative bg-primary flex flex-col">
                 {/* Use background image overlay for desktop */}
                 <Image
                     src={bg}

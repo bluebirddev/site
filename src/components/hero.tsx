@@ -14,7 +14,7 @@ export function Hero({
     buttons: ReactNode
 }) {
     return (
-        <section className="fade fade-left container pt-32 lg:pt-52 pb-32 lg:pb-44" id={id}>
+        <section className="fade fade-left container pt-8 lg:pt-28 pb-32 lg:pb-44" id={id}>
             <div className="space-y-8 items-center justify-center flex flex-col ">
                 <h3 className="pill-heading">{subtitle}</h3>
                 <h1>{title}</h1>

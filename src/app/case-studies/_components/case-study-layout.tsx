@@ -53,7 +53,7 @@ export function CaseStudyLayout({
     caseStudy: CaseStudy
 }) {
     return (
-        <div className="container pt-32 lg:pt-52 pb-24 lg:pb-32 space-y-24 lg:space-y-36">
+        <div className="container pt-8 lg:pt-28 pb-24 lg:pb-32 space-y-24 lg:space-y-36">
             <section className="flex flex-col lg:flex-row gap-20">
                 <div className="lg:w-1/2 text-left flex flex-col items-start gap-y-8">
                     <h3 className="pill-heading fade fade-left">Client Testimonials</h3>
@@ -72,7 +72,7 @@ export function CaseStudyLayout({
                     </ul>
                 </div>
                 <div className="flex-1 flex items-center">
-                    <Image src={intro.image} alt="main" />
+                    <Image src={intro.image} alt="main" priority />
                 </div>
             </section>
 

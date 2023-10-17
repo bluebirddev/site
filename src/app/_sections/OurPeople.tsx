@@ -53,7 +53,7 @@ const blocks = [
 export function OurPeople() {
     return (
         <section
-            className="container w-full max-w-full flex flex-col items-center overflow-hidden pt-32 lg:pt-44"
+            className="container w-full max-w-full flex flex-col items-center overflow-hidden pt-24 lg:pt-32"
             id="people"
         >
             <div className="space-y-8 flex flex-col items-center pb-12 lg:pb-24">

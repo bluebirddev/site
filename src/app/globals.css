@@ -129,7 +129,7 @@ textarea {
 /**
  * Slide
  */
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .fade {
         opacity: 0;
         transition-duration: 1s ease;
@@ -153,4 +153,4 @@ textarea {
     .fade.fade-right {
         transform: translateX(50px);
     }
-} */
+}

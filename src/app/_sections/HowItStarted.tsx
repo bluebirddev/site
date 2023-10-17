@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function HowItStarted() {
     return (
-        <section className="mt-24 lg:mt-48 container card p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch">
+        <section className="mt-24 lg:mt-48 container card p-8 lg:p-14 flex flex-col lg:flex-row gap-12 items-stretch mb-4">
             <div className="lg:flex-1 h-64 lg:h-auto relative fade fade-left">
                 <Image
                     src={howWeStarted}

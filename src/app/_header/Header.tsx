@@ -14,7 +14,7 @@ export function Header() {
         <>
             <header
                 className="lg:flex z-[101] justify-between lg:justify-between fade fade-down py-5 px-8 flex items-center bg-primary bg-opacity-60
-                fixed top-0 left-0 right-0 backdrop-blur-xl"
+                sticky top-0 left-0 right-0 backdrop-blur-xl"
                 style={{
                     height: HEADER_HEIGHT,
                 }}

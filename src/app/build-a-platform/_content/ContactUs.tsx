@@ -39,6 +39,12 @@ export function ContactUs({ quote }: { quote: string }) {
                             <input placeholder="Email Address" name="email" type="email" required />
                             <input placeholder="+1 932 123 123" name="phone" type="tel" required />
                             <input placeholder="Company (Optional)" name="company" type="text" />
+                            <textarea
+                                placeholder="Type any comments here"
+                                rows={3}
+                                className="col-span-2"
+                                name="message"
+                            />
                             <input
                                 name="quote"
                                 type="text"
