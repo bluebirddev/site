@@ -403,7 +403,7 @@ export default function BuildAPlatformPage() {
     return (
         <>
             <div className="pt-8 lg:pt-28 pb-20 container">
-                <div className="fixed bottom-[8%] right-[3%] px-8 py-5 bg-secondary z-10">
+                <div className="fixed bottom-[16px] right-[16px] lg:bottom-[8%] lg:right-[3%] px-8 py-5 bg-secondary z-10">
                     <div className="font-medium">Price Estimate</div>
                     <div className="font-bold text-2xl">
                         {userCurrency} {price.toLocaleString()}

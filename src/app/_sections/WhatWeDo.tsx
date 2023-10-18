@@ -7,6 +7,7 @@ import pm from '@/images/what-we-do/pm.svg'
 import ux from '@/images/what-we-do/ux.svg'
 import outsourcing from '@/images/what-we-do/outsourcing.svg'
 import api from '@/images/what-we-do/api.svg'
+import ai from '@/images/what-we-do/ai.svg'
 
 const CARDS = [
     {
@@ -50,6 +51,12 @@ const CARDS = [
         icon: api,
         content:
             'We craft robust and efficient APIs that seamlessly integrate diverse software systems, enabling streamlined data exchange and automation.',
+    },
+    {
+        title: 'AI Development',
+        icon: ai,
+        content:
+            'Leveraging the latest advancements in AI, we develop intelligent systems using LLMs and other cutting-edge technologies to solve complex problems.',
     },
 ]
 

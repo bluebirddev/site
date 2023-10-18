@@ -31,7 +31,8 @@ export function MobileHeader() {
                 <div
                     className=" absolute top-[20px] left-[20px] right-[20px] bg-[rgba(14,22,53,.3)] transition-all duration-500 backdrop-blur-md pt-2.5 px-5 pb-8 border border-white border-opacity-20"
                     style={{
-                        marginTop: isOpen ? 0 : '-100vh',
+                        // full height - header height - 20px padding
+                        marginTop: isOpen ? 0 : 'calc(-100vh - 96px)',
                     }}
                 >
                     <ul className="text-white text-center space-y-3">
