@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 import { useRouter } from 'next/navigation'
+import type { Metadata } from 'next'
 
 import platform_apple from '@/images/calculator/platform_apple.svg'
 import platform_android from '@/images/calculator/platform_android.svg'

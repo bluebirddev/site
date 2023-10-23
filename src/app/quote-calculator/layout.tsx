@@ -3,8 +3,21 @@ import Image from 'next/image'
 import { Hero } from '@/components/hero'
 import calculator from '@/images/calculator.svg'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
-export default function QuoteCalculatorPage({ children }: { children: React.ReactNode }) {
+const title = 'Bluebird - Quote Calculator'
+
+export const metadata: Metadata = {
+    title,
+    twitter: {
+        title,
+    },
+    openGraph: {
+        title,
+    },
+}
+
+export default function QuoteCalculatorLayout({ children }: { children: React.ReactNode }) {
     return (
         <>
             {children}

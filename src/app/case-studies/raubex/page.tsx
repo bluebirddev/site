@@ -6,6 +6,19 @@ import designProcess from '@/images/case-studies/raubex/design_process.png'
 import buildProcess from '@/images/case-studies/raubex/build_process.jpg'
 
 import { CaseStudy, CaseStudyLayout } from '../_components/case-study-layout'
+import type { Metadata } from 'next'
+
+const title = 'Bluebird - Raubex'
+
+export const metadata: Metadata = {
+    title,
+    twitter: {
+        title,
+    },
+    openGraph: {
+        title,
+    },
+}
 
 const caseStudy: CaseStudy = {
     id: 'raubex',

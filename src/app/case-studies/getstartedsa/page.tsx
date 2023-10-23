@@ -6,6 +6,19 @@ import designProcess from '@/images/case-studies/getstartedza/design_process.png
 import buildProcess from '@/images/case-studies/getstartedza/build_process.png'
 
 import { CaseStudy, CaseStudyLayout } from '../_components/case-study-layout'
+import type { Metadata } from 'next'
+
+const title = 'Bluebird - GetStarted'
+
+export const metadata: Metadata = {
+    title,
+    twitter: {
+        title,
+    },
+    openGraph: {
+        title,
+    },
+}
 
 const caseStudy: CaseStudy = {
     id: 'getstartedsa',

@@ -22,24 +22,24 @@ const headingFont = Nunito_Sans({
     variable: '--heading',
 })
 
+const title = 'Bluebird'
+
 const description =
     'Bluebird Development provides exclusive consulting, development, and design resources for you and your team.'
 
-const title = 'Bluebird - Home'
-
 export const metadata: Metadata = {
     metadataBase: process.env.NODE_ENV === 'production' ? null : new URL('http://localhost:3000'),
-    title,
     description,
+    title,
     viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no',
     twitter: {
-        title,
         description,
+        title,
         card: 'summary_large_image',
     },
     openGraph: {
-        title,
         description,
+        title,
         type: 'website',
     },
 }
