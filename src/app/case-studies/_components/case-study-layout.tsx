@@ -160,12 +160,12 @@ export function CaseStudyLayout({
                             ))}
                         </ul>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 relative">
                         <Image
                             src={process.designImage}
                             style={{
+                                objectFit: 'cover',
                                 height: '100%',
-                                width: 'auto',
                             }}
                             alt="design-image"
                         />
