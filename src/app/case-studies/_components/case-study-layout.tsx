@@ -243,36 +243,3 @@ export function CaseStudyLayout({
         </div>
     )
 }
-
-export function CaseStudyLayout({
-    caseStudy: { id, name, intro, challenge, approach, process, mockup, achieved },
-}: {
-    caseStudy: CaseStudy
-}) {
-    return h.div({
-        class: 'container pt-8 lg:pt-28 pb-24 lg:pb-32 space-y-24 lg:space-y-36',
-        children: (
-            <section className="flex flex-col lg:flex-row gap-20">
-                <div className="lg:w-1/2 text-left flex flex-col items-start gap-y-8">
-                    <h3 className="pill-heading fade fade-left">Client Testimonials</h3>
-                    <h2 className="fade fade-left">{intro.heading}</h2>
-                    <p>{intro.description}</p>
-                    <h3 className="pt-4">Services We Offered {name}</h3>
-                    <ul className="flex flex-wrap gap-5">
-                        {intro.servicesOffered.map((service, i) => (
-                            <li
-                                key={i}
-                                className="p-4 border border-white border-opacity-20 bg-white bg-opacity-10 backdrop-blur-lg"
-                            >
-                                {service}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="flex-1 flex items-center">
-                    <Image src={intro.image} alt="main" priority />
-                </div>
-            </section>
-        ),
-    })
-}
