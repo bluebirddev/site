@@ -12,6 +12,9 @@ const config: Config = {
                 primary: '#0c1534',
                 secondary: '#f3883c',
             },
+            screens: {
+                huge: '2200px',
+            },
         },
     },
     plugins: [],
