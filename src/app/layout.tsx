@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {/* Use background image overlay for desktop */}
                 <Image
                     src={bg}
-                    className="hidden sm:block"
+                    className="hidden sm:block huge:hidden"
                     alt="Background"
                     quality={90}
                     style={{
