@@ -157,3 +157,8 @@ textarea {
         transform: translateX(50px);
     }
 }
+
+.privacy-policy p,
+.privacy-policy li {
+    margin: 16px 0;
+}
