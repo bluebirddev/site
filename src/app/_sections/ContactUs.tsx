@@ -38,7 +38,7 @@ export function ContactUs() {
                             ></input>
                             <input placeholder="Full name" name="full_name" type="text" required />
                             <input placeholder="Email Address" name="email" type="email" required />
-                            <input placeholder="+1 932 123 123" name="phone" type="tel" required />
+                            <input placeholder="+1 932 123 123" name="phone" type="tel" />
                             <input placeholder="Company (Optional)" name="company" type="text" />
                             <textarea
                                 placeholder="Type your message here"

@@ -9,14 +9,12 @@ export function ContactUs({ quote }: { quote: string }) {
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         const formData = new FormData(event.target as HTMLFormElement)
-        console.log({ formData })
 
         await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData,
         })
 
-        setIsSuccess(true)
         setIsSuccess(true)
     }
 
@@ -37,7 +35,7 @@ export function ContactUs({ quote }: { quote: string }) {
                             ></input>
                             <input placeholder="Full name" name="full_name" type="text" required />
                             <input placeholder="Email Address" name="email" type="email" required />
-                            <input placeholder="+1 932 123 123" name="phone" type="tel" required />
+                            <input placeholder="+1 932 123 123" name="phone" type="tel" />
                             <input placeholder="Company (Optional)" name="company" type="text" />
                             <textarea
                                 placeholder="Type any comments here"
