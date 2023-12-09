@@ -162,3 +162,24 @@ textarea {
 .privacy-policy li {
     margin: 16px 0;
 }
+
+.tos {
+    @apply -mt-12;
+}
+.tos p,
+.tos li {
+    margin: 16px 0;
+}
+.tos h1 {
+    @apply text-left;
+}
+.tos h1,
+.tos h2 {
+    @apply mt-12;
+}
+.tos ul {
+    @apply list-disc pl-6;
+}
+.tos ul ul {
+    list-style-type: circle;
+}

@@ -76,12 +76,21 @@ export function Footer() {
             </div>
             <div className="py-8 border-t border-t-white border-opacity-20 flex flex-col gap-4 md:flex-row justify-between">
                 <span>Copyright © Bluebird Technologies 2023 | All rights reserved</span>
-                <Link
-                    href={`/privacy-policy`}
-                    className="hover:text-opacity-100 text-white text-opacity-60"
-                >
-                    Privacy Policy
-                </Link>
+                <div className="flex items-center gap-3">
+                    <Link
+                        href={`/privacy-policy`}
+                        className="hover:text-opacity-100 text-white text-opacity-60"
+                    >
+                        Privacy Policy
+                    </Link>
+                    |
+                    <Link
+                        href={`/terms-of-service`}
+                        className="hover:text-opacity-100 text-white text-opacity-60"
+                    >
+                        Terms of Service
+                    </Link>
+                </div>
             </div>
         </footer>
     )
