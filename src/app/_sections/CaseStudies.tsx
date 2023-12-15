@@ -19,7 +19,7 @@ export const CASE_STUDIES = [
         image: aurora,
         logo: auroraLogo,
         title: 'Aurora',
-        description: 'Radically reduce failed payments and churn',
+        description: 'Tool for carbon footprint awareness and offsetting',
     },
     {
         id: 'raubex',
