@@ -77,9 +77,9 @@ export default function TermsOfServicePage() {
                 Finally, our Services are not intended for minors under the age of 18. If you are a
                 minor under the age of 18, please do not register for our Services or send any
                 Personal Information to us. If you have reason to believe that a minor under the age
-                of 18 is using our Services, please let us know immediately at info@bluebird.dev and
-                we will seek to revoke access and delete any associated information as quickly as
-                possible.
+                of 18 is using our Services, please let us know immediately at info@bluebird.tech
+                and we will seek to revoke access and delete any associated information as quickly
+                as possible.
             </p>
             <h1>Acceptable Use</h1>
             <p>
@@ -176,7 +176,7 @@ export default function TermsOfServicePage() {
                 <li>
                     Copyright Notices: If you believe that your copyright has been infringed by
                     something on our Services, you can send us a DMCA-compliant copyright notice by
-                    sending an email to info@bluebird.dev. On receipt of a compliant notice, we
+                    sending an email to info@bluebird.tech. On receipt of a compliant notice, we
                     shall work to promptly remove or disable material identified as infringing.
                     Please include the following information in your notice:
                     <ul>
@@ -236,7 +236,7 @@ export default function TermsOfServicePage() {
             <p>
                 By replying to any text, SMS, or MMS message you receive from us, you may text
                 “STOP” to cancel or “HELP” for customer support information. You can also get help
-                directly at info@bluebird.dev. If you choose to cancel text, SMS, or MMS messages
+                directly at info@bluebird.tech. If you choose to cancel text, SMS, or MMS messages
                 from us, you agree to receive a final message from us confirming your cancellation.
                 Please note that if you text “STOP”, this may prevent us from sending one-time codes
                 to your phone and may limit your experience. If you would like to allow these codes
@@ -305,7 +305,7 @@ export default function TermsOfServicePage() {
                 necessary to protect the rights or property of Bluebird.
             </p>
             <p>
-                You may also request a deletion of our account by contacting info@bluebird.dev.
+                You may also request a deletion of our account by contacting info@bluebird.tech.
                 Please be advised that for security and privacy reasons we may request information
                 to verify your entity in order to process these requests.
             </p>
@@ -402,7 +402,7 @@ export default function TermsOfServicePage() {
                 <li>
                     Notices: Notices under these Terms shall be provided to you under the
                     information provided to Bluebird when you registered your account. Notices to
-                    Bluebird may be provided by sending a message to info@bluebird.dev.
+                    Bluebird may be provided by sending a message to info@bluebird.tech.
                 </li>
                 <li>
                     Severability: If any provision of these Terms is found to be unenforceable or

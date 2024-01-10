@@ -39,7 +39,7 @@ export function Footer() {
                             <Image src={email} alt="email" />
                             <div>
                                 <div className="text-opacity-60 text-white mb-1">Email</div>
-                                <div>info@bluebird.dev</div>
+                                <div>info@bluebird.tech</div>
                             </div>
                         </li>
                         <li className="flex border border-white border-opacity-10 px-5 py-4 space-x-4">

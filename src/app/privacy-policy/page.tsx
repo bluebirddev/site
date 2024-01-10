@@ -472,7 +472,7 @@ export default function PrivacyPolicyPage() {
             <p>If you have any questions about this Privacy Policy, You can contact us:</p>
             <ul>
                 <li>
-                    <p>By email: info@bluebird.dev</p>
+                    <p>By email: info@bluebird.tech</p>
                 </li>
                 <li>
                     <p>
