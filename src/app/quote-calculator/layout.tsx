@@ -30,7 +30,7 @@ export default function QuoteCalculatorLayout({ children }: { children: React.Re
                 }
                 description={
                     <>
-                        Experience Bluebird Development’s Innovative Quote Estimation Feature!
+                        Experience Bluebird Technologies’s Innovative Quote Estimation Feature!
                         Customize project parameters effortlessly for accurate cost insights.
                         Simplify your planning process and revolutionize your development decisions.
                     </>

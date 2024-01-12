@@ -25,7 +25,7 @@ const headingFont = Nunito_Sans({
 const title = 'Bluebird'
 
 const description =
-    'Bluebird Development provides exclusive consulting, development, and design resources for you and your team.'
+    'Bluebird Technologies provides exclusive consulting, development, and design resources for you and your team.'
 
 export const metadata: Metadata = {
     metadataBase: process.env.NODE_ENV === 'production' ? null : new URL('http://localhost:3000'),

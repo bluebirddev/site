@@ -35,7 +35,7 @@ export function Intro() {
                 }
                 description={
                     <>
-                        Bluebird Development provides exclusive consulting, development, and design
+                        Bluebird Technologies provides exclusive consulting, development, and design
                         resources for you and your team.
                     </>
                 }

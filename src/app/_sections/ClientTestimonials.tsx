@@ -14,7 +14,7 @@ const blocks = [
         person: 'Stefan Griesel',
         icon: stefan,
         testimonial:
-            "Thanks to Bluebird Development's work, the client onboarded three end customers at launch. Within a year, the app processed 500,000 transactions. The team worked well with the Agile methodology, meeting milestones ahead of time. Their efficiency, flexibility, and expertise also stood out.",
+            "Thanks to Bluebird Technologies's work, the client onboarded three end customers at launch. Within a year, the app processed 500,000 transactions. The team worked well with the Agile methodology, meeting milestones ahead of time. Their efficiency, flexibility, and expertise also stood out.",
     },
     {
         person: 'Philip Mourarrige',
@@ -28,14 +28,14 @@ const blocks = [
         title: 'Head of Strategy, Aurora Sustainability',
         icon: danielle,
         testimonial:
-            'Bluebird Development worked quickly without compromising the quality of their work. They maintained an excellent communication approach and provided regular updates on the progress of deliverables. Their skillset in development was impressive',
+            'Bluebird Technologies worked quickly without compromising the quality of their work. They maintained an excellent communication approach and provided regular updates on the progress of deliverables. Their skillset in development was impressive',
     },
     {
         person: 'Michail Scholiadis',
         title: 'Partner, BSC Global',
         icon: michail,
         testimonial:
-            "Bluebird Development has been greatly contributing to the internal team's development project. Additionally, their culture and speed of work have been a great fit for the company. The entire team has been responsive and responsible, and there are no troubles with their work.",
+            "Bluebird Technologies has been greatly contributing to the internal team's development project. Additionally, their culture and speed of work have been a great fit for the company. The entire team has been responsive and responsible, and there are no troubles with their work.",
     },
     {
         person: 'Alessandro Mion',
